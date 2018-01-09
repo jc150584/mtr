@@ -1,4 +1,4 @@
-﻿using OxyPlot;
+﻿ using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using Xamarin.Forms;
@@ -22,22 +22,22 @@ namespace MuscleTrainingRecords00
             var X_line = new LineSeries() { Title = "体重" };
             X_line.Color = OxyColors.Red;
 
-            var Y_line = new LineSeries() { Title = "体脂肪" };
-            Y_line.Color = OxyColors.Blue;
+            //var Y_line = new LineSeries() { Title = "体脂肪" };
+            //Y_line.Color = OxyColors.Blue;
 
             foreach (DataPoint dp in itemList)
             {
                 X_line.Points.Add(dp);
 
             }
-            foreach (DataPoint dp in itemList)
+            /*foreach (DataPoint dp in itemList)
             {
                 Y_line.Points.Add(dp);
 
-            }
+            }*/
 
             X_line.Points.Add(new DataPoint(3, 3));
-            Model.Series.Add(Y_line);
+           // Model.Series.Add(Y_line);
             Model.Series.Add(X_line);
 
             var axisY = new LinearAxis() //横
