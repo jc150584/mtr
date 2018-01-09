@@ -20,14 +20,15 @@ namespace MuscleTrainingRecords00
         public Task<List<TodoItem>> GetItemsAsync()
         {
             return database.Table<TodoItem>().ToListAsync();
-            database.DropTableAsync<TodoItemDatabase>;
+            
         }
 
 
 
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
         {
-            
+            database.DropTableAsync<TodoItem>;
+
             return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0 "
                                                   + " order by [Created] desc"
                                                 );
