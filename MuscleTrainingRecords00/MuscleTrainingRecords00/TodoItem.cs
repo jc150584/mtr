@@ -19,5 +19,7 @@ namespace MuscleTrainingRecords00
         public int Bfat { get; set; }
 
 
+    
+
     }
 }

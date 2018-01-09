@@ -61,7 +61,7 @@ namespace MuscleTrainingRecords00
 
         public static TodoItemDatabase getDatabase()
         {
-            database.DropTableAsync<TodoItemDatabase>;
+            //database.DropTableAsync<TodoItemDatabase>;
             if (db == null)
             {
                 db = new TodoItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
