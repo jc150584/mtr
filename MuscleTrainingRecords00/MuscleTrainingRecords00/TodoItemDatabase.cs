@@ -14,6 +14,7 @@ namespace MuscleTrainingRecords00
         {
             database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<TodoItem>().Wait();
+            database.DropTableAsync<TodoItemDatabase>;
         }
 
         public Task<List<TodoItem>> GetItemsAsync()
@@ -25,6 +26,7 @@ namespace MuscleTrainingRecords00
 
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
         {
+            
             return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0 "
                                                   + " order by [Created] desc"
                                                 );
