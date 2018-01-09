@@ -14,12 +14,13 @@ namespace MuscleTrainingRecords00
         {
             database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<TodoItem>().Wait();
-            database.DropTableAsync<TodoItemDatabase>;
+            
         }
 
         public Task<List<TodoItem>> GetItemsAsync()
         {
             return database.Table<TodoItem>().ToListAsync();
+            database.DropTableAsync<TodoItemDatabase>;
         }
 
 
