@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MuscleTrainingRecords00.RMPage"
+             xmlns:local="clr-namespace:RMPage"
+             Title="RM計算">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Spacing="50">
+
+            <StackLayout.Margin>
+
+                <!-- iOSはトップに 20 の余白が必要 -->
+                <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                     Android="0, 0, 0, 0"
+                     WinPhone="0, 0, 0, 0" />
+            </StackLayout.Margin>
+
+
+
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="重量(kg)" 
+                       FontSize="Large"/>
+                <Entry x:Name="Weight" Placeholder="重量を入力してください"
+                                        
+                       WidthRequest="250"
+                       />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+
+                <Label Text="回数   "
+                       FontSize="Large"
+                       />
+
+                <Picker x:Name="count" Title="数字を選択してください" WidthRequest="250" >
+                    <Picker.Items>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </StackLayout>
+
+            <Button Text="計算"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#1e90ff" TextColor="White" FontSize="Large" HorizontalOptions="FillAndExpand" />
+
+
+            <Label Text="推定RM"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   BackgroundColor="Silver"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Label Text="あなたの1RMは"
+                       FontSize="Large"
+                      />
+                <!---
+                <Label Text="重量"
+                       FontSize="Large"/>
+                 -->
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                         Spacing="30">
+
+                <Label x:Name="RM"
+                       Text="　　   "
+                       WidthRequest="200"
+                       FontSize="100"
+                       TextColor="Orange"
+                       />
+
+
+                <Label Text="kgです"
+                       FontSize="Large"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                      
+                      />
+                <!--ここ良い配置できない-->
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical"
+                         HorizontalOptions="EndAndExpand"
+                         VerticalOptions="EndAndExpand">
+
+                <Label Text="1RMとは"
+                       TextColor="Red"
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+                <Label
+                    Text="挙上できる最大の重量、すなわちトレーニングで扱うことが可能となるMAXの重さを示す言葉。 尚、１ＲＭの「１」とは、「１回」につき最大で挙上することができる重量を指す。"
+                    
+                    FontSize="Medium"/>
+            </StackLayout>
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

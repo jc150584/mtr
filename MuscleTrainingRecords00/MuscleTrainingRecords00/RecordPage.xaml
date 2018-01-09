@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MuscleTrainingRecords00.RecordPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                 Spacing="50">
+
+            <!--= <StackLayout Orientation="Horizontal">
+            
+            <Button Text="記録"
+                    Clicked="Button_Clicked"
+                    FontSize="15"/>
+            <Button Text="保存" 
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="EndAndExpand"
+                    FontSize="15"/>
+        </StackLayout> -->
+
+            <Label x:Name="label1"
+               Text=" "
+               HorizontalOptions="Center"
+               FontSize="35"/>
+
+            <BoxView BackgroundColor="Black"
+                 HeightRequest="0.5"
+                 WidthRequest="300"/>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="labelC"
+               Text="日付                "
+               FontSize="35"/>
+
+                <DatePicker Format="D" VerticalOptions="Center"
+                    WidthRequest="200"
+                    HeightRequest="15"/>
+            </StackLayout>
+
+            <BoxView BackgroundColor="Black"
+                 HeightRequest="0.5"
+                 WidthRequest="300"/>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label x:Name="label2"
+               Text="重量(kg)            "
+               FontSize="35"/>
+
+                <Entry HorizontalOptions="Center"
+                   WidthRequest="130"
+                   HeightRequest="15"
+                   Keyboard ="Numeric"
+                   PlaceholderColor="White"
+                   />
+
+
+                <Label x:Name="KG"
+                   Text="kg"
+                   FontSize="35"/>
+            </StackLayout>
+
+            <BoxView BackgroundColor="Black"
+                 HeightRequest="0.5"
+                 WidthRequest="300"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="label3"
+               Text="レッグ(回数)      "
+               FontSize="35"/>
+
+                <Entry HorizontalOptions="End"
+                   WidthRequest="130"
+                   HeightRequest="15"
+                   Keyboard ="Numeric"/>
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="Black"
+                 HeightRequest="0.5"
+                 WidthRequest="300"/>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label x:Name="label4"
+               Text="セット数            "
+               FontSize="35"/>
+
+                <Entry WidthRequest="130"
+                   HeightRequest="25"
+                   Keyboard ="Numeric" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,13 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MuscleTrainingRecords00"
              x:Class="MuscleTrainingRecords00.MainPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+    <NavigationPage Title="記録" Icon="contract.png">　
+        <!--下タブのタイトル-->
+
+        <x:Arguments>
+            <local:RecordListPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="トレーニング履歴" Icon="notebook.png">
+        <x:Arguments>
+            <local:TrainingLogPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="メニュー一覧" Icon="dumbbell-variant-outline.png">
+        <x:Arguments>
+            <local:MenuPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="ボディー統計" Icon="graph.png">
+        <x:Arguments>
+            <local:GraphPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="RM計算" Icon="calculator.png">
+        <x:Arguments>
+            <local:RMPage />
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>

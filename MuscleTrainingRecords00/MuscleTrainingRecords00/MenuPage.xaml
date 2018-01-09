@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MuscleTrainingRecords00.MenuPage"
+             Title="メニュー一覧">
+    <ContentPage.Content>
+
+
+        <StackLayout Orientation="Vertical"
+                     Spacing="20">
+
+            <StackLayout.Margin>
+
+                <!-- iOSはトップに 20 の余白が必要 -->
+                <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                     Android="0, 0, 0, 0"
+                     WinPhone="0, 0, 0, 0" />
+            </StackLayout.Margin>
+
+            <!--
+            <Picker x:Name="Sort" Title="並び替え"
+                    SelectedIndexChanged="Sort_SelectedIndexChanged_1">
+                <Picker.Items>
+                    <x:String>五十音順</x:String>
+                    <x:String>負荷度</x:String>
+                </Picker.Items>
+            </Picker>
+            -->
+
+
+            <SearchBar
+             x:Name="Select"
+             FontFamily = "Poornut"
+             FontSize = "20"
+             HorizontalTextAlignment = "Center"
+             Placeholder = "入力してください" 
+                SearchButtonPressed="Select_SearchButtonPressed"/>
+
+            <!---WidthRequest追加-->
+
+
+            <StackLayout Orientation="Horizontal"
+                             BackgroundColor="CornflowerBlue"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="StartAndExpand"
+                             HeightRequest="50"
+                             WidthRequest="100"
+                             
+                             >
+
+
+                <Button 
+                        Text="全部"
+                        
+                        
+                        Clicked="全部_Clicked"
+                        TextColor="White"
+                    FontSize="Medium"
+                    />
+
+                <Button 
+                        Text="腹"
+                       
+                        Clicked="腹_Clicked"
+                        TextColor="White"
+                     FontSize="Medium"/>
+
+
+                <Button 
+                        Text="腕"
+                        
+                        Clicked="腕_Clicked"
+                        TextColor="White"
+                     FontSize="Medium"/>
+
+
+                <Button 
+                        Text="背中"
+                        
+                        Clicked="背中_Clicked"
+                         TextColor="White"
+                     FontSize="Medium"/>
+
+
+                <Button 
+                        Text="胸"
+                        
+                        Clicked="胸_Clicked"
+                        TextColor="White"
+                     FontSize="Medium"/>
+
+                <Button 
+                        Text="肩"
+                       
+                        Clicked="肩_Clicked"
+                         TextColor="White"
+                     FontSize="Medium"/>
+
+                <Button 
+                        Text="脚"
+                        
+                        Clicked="脚_Clicked"
+                         TextColor="White"
+                     FontSize="Medium"/>
+
+
+            </StackLayout>
+
+
+            <BoxView 
+                BackgroundColor="Black"
+                HeightRequest="0.5"
+                WidthRequest="600"/>
+
+
+
+            <ListView x:Name="listView"
+                      SeparatorColor="Black"
+                        />
+
+
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

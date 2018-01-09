@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MuscleTrainingRecords00.GraphPage"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             xmlns:local="clr-namespace:MuscleTrainingRecords00"
+             
+             Title="ボディー統計">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Spacing="10" >
+            <StackLayout.Margin>
+
+                <!-- iOSはトップに 20 の余白が必要 -->
+                <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                     Android="0, 0, 0, 0"
+                     WinPhone="0, 0, 0, 0" />
+            </StackLayout.Margin>
+
+            <!-- Graph
+                <oxy:PlotView Model="{Binding Model}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#696969">
+                <oxy:PlotView.BindingContext>
+                    <local:LineChart />
+                </oxy:PlotView.BindingContext>
+                
+            </oxy:PlotView> -->
+
+            <!--DBver-->
+            <oxy:PlotView Model="{Binding Model}"
+                          VerticalOptions="FillAndExpand"
+                          HorizontalOptions="FillAndExpand">
+                <oxy:PlotView.BindingContext>
+                    <local:LineChart />
+                </oxy:PlotView.BindingContext>
+            </oxy:PlotView>
+
+
+            <!--
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                
+                <Label Text="name" />
+                <Entry x:Name="eName" Placeholder="name" /
+                <Label Text="notes" />
+                <Entry x:Name="eNotes" Placeholder="notes" />
+                <Label Text="体重" />
+                <Entry x:Name="bWeight" Placeholder="体重を入力してください" Text="0" WidthRequest="200"/>
+                <Label Text="体脂肪" />
+                <Entry x:Name="bFat" Placeholder="体脂肪を入力してください" Text="0" WidthRequest="200"/>
+                <Label Text="created" />
+                <DatePicker x:Name="eCreated" Format = "yyyy/MM/dd"/>
+                <Label Text="Done" />
+                <Switch x:Name="eDone" IsToggled="true" />
+                <Button Text="add Item" x:Name="addItemButton"
+                Clicked="Handle_Clicked" />
+            </StackLayout>
+             -->
+
+
+
+
+
+            <StackLayout Orientation="Horizontal"
+                         Spacing="10"
+                         HorizontalOptions="End">
+
+
+
+
+
+                <Label Text="前回比　体重(kg)" 
+                       FontSize="Medium"
+                       WidthRequest="130"/>
+
+                <Entry x:Name="GBWeight"
+                       WidthRequest="130"
+                       Text="             "/>
+
+                <Label Text="体脂肪(%)"
+                       FontSize="Medium"
+                       WidthRequest="130"/>
+
+                <Entry x:Name="GBfat"
+                       WidthRequest="130"
+                       Text="             "/>
+
+
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"
+                     Spacing="10" >
+
+
+                <Label Text="日付" 
+                       FontSize="Medium"/>
+
+                <DatePicker 
+                            x:Name="eCreated" 
+                             Format = "yyyy/MM/dd"
+                            WidthRequest="250"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="30"/>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical"
+                     Spacing="10" >
+
+
+                <Label Text="体重(kg)"
+                       FontSize="Medium"/>
+
+                <Entry x:Name="bWeight" Placeholder="体重を入力してください" Text="0"
+                       
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="30"/>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical"
+                     Spacing="10" >
+
+                <Label Text="体脂肪(%)"
+                       FontSize="Medium"/>
+
+                <Entry x:Name="bFat" Placeholder="体脂肪を入力してください" Text="0" WidthRequest="200"
+                       
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="30"/>
+
+                <Button Text="保存" x:Name="addItemButton"
+                Clicked="Handle_Clicked" />
+
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> e>
