@@ -8,6 +8,7 @@ namespace MuscleTrainingRecords00
 {
     public class TodoItemDatabase
     {
+        
         readonly SQLiteAsyncConnection database;
 
         public TodoItemDatabase(string dbPath)
@@ -27,7 +28,7 @@ namespace MuscleTrainingRecords00
 
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
         {
-            database.DropTableAsync<TodoItem>;
+            
 
             return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0 "
                                                   + " order by [Created] desc"
@@ -60,6 +61,7 @@ namespace MuscleTrainingRecords00
 
         public static TodoItemDatabase getDatabase()
         {
+            database.DropTableAsync<TodoItemDatabase>;
             if (db == null)
             {
                 db = new TodoItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
