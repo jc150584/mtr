@@ -116,7 +116,7 @@
                 <Label Text="体重(kg)"
                        FontSize="Medium"/>
 
-                <Entry x:Name="bWeight" Placeholder="体重を入力してください" Text="0"
+                <Entry x:Name="bWeight" Placeholder="体重を入力してください" 
                        
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
@@ -131,7 +131,8 @@
                 <Label Text="体脂肪(%)"
                        FontSize="Medium"/>
 
-                <Entry x:Name="bFat" Placeholder="体脂肪を入力してください" Text="0" WidthRequest="200"
+                <Entry x:Name="bFat" Placeholder="体脂肪を入力してください"
+                       WidthRequest="200"
                        
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
