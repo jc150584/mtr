@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MuscleTrainingRecords00;
 
 namespace MuscleTrainingRecords00
 {
@@ -21,7 +22,7 @@ namespace MuscleTrainingRecords00
 
    
 
-        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        public static void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
             yyyymmdd = new DateTime(DatePicker.Date.Year, DatePicker.Date.Month, DatePicker.Date.Day);
 
