@@ -29,7 +29,16 @@ namespace MuscleTrainingRecords00
             }
             Content = layout;
         }*/
+
+            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            var record = RecordsModel.SelectRecords();
+            foreach (var Memo in record)
+            {
+                layout.Children.Add(new Label { Text = RecordsModel.SelectRecords});
+                
+            }
         }
+
         private void RecordListButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MenuPage());
