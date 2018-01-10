@@ -32,7 +32,8 @@
 
                 <DatePicker Format="D" VerticalOptions="Center"
                     WidthRequest="200"
-                    HeightRequest="15"/>
+                    HeightRequest="15"
+                    DateSelected="DatePicker_DateSelected"/>
             </StackLayout>
 
             <BoxView BackgroundColor="Black"
@@ -50,6 +51,7 @@
                    HeightRequest="15"
                    Keyboard ="Numeric"
                    PlaceholderColor="White"
+                   x:Name="Weight"
                    />
 
 
@@ -70,7 +72,8 @@
                 <Entry HorizontalOptions="End"
                    WidthRequest="130"
                    HeightRequest="15"
-                   Keyboard ="Numeric"/>
+                   Keyboard ="Numeric"
+                   x:Name="Leg"/>
 
             </StackLayout>
 
@@ -86,9 +89,16 @@
 
                 <Entry WidthRequest="130"
                    HeightRequest="25"
-                   Keyboard ="Numeric" />
+                   Keyboard ="Numeric"
+                   x:Name="Set"/>
+                
+                
 
             </StackLayout>
+            <Button Text="保存" 
+                    Clicked="Insert_Clicked"
+                    HorizontalOptions="EndAndExpand"
+                    FontSize="15"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

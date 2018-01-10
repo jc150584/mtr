@@ -26,7 +26,7 @@ namespace MuscleTrainingRecords00
         // public int Set_no { get; set; } //Setting表の外部キー
 
         /********************インサートメソッド**********************/
-        public static void InsertFood(int m_no, int m_weight, int m_leg, int m_set, DateTime m_date)
+        public static void InsertRecords(int m_no, int m_weight, int m_leg, int m_set, DateTime m_date)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))

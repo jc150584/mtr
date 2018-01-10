@@ -12,9 +12,28 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordPage : ContentPage
     {
+        DateTime yyyymmdd;
+
         public RecordPage()
         {
             InitializeComponent();
+        }
+
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
+
+            DisplayAlert("", "保存されました", "OK");
+
+            Navigation.PushAsync(new RecordListPage());
+
+        }
+
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            yyyymmdd = new DateTime(DatePicker.Date.Year, DatePicker.Date.Month, DatePicker.Date.Day);
+
+
         }
     }
 }
