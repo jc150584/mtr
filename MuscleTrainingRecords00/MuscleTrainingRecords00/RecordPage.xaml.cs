@@ -20,14 +20,6 @@ namespace MuscleTrainingRecords00
             InitializeComponent();
         }
 
-   
-
-        public static void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
-        {
-            yyyymmdd = new DateTime(DatePicker.Date.Year, DatePicker.Date.Month, DatePicker.Date.Day);
-
-
-        }
 
         private void Insert_Clicked(object sender, EventArgs e)
         {
@@ -37,6 +29,12 @@ namespace MuscleTrainingRecords00
             DisplayAlert("", "保存されました", "OK");
 
             Navigation.PushAsync(new RecordListPage());
+        }
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            yyyymmdd = new DateTime(DatePicker.Date.Year, DatePicker.Date.Month, DatePicker.Date.Day);
+
+
         }
     }
 }

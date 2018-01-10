@@ -33,7 +33,8 @@
                 <DatePicker Format="D" VerticalOptions="Center"
                     WidthRequest="200"
                     HeightRequest="15"
-                    DateSelected="DatePicker_DateSelected"/>
+                    DateSelected="DatePicker_DateSelected"
+                            x:Name="DatePicker"/>
             </StackLayout>
 
             <BoxView BackgroundColor="Black"
