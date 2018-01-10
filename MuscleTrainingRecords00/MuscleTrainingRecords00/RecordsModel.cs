@@ -56,7 +56,7 @@ namespace MuscleTrainingRecords00
             
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
-               // db.DropTable<RecordsModel>();
+             
                 try
                 {
                     
