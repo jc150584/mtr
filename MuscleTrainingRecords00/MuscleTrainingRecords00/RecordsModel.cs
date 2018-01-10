@@ -21,6 +21,7 @@ namespace MuscleTrainingRecords00
         public int M_set { get; set; } //セット数
 
         public DateTime M_date { get; set; } //日付
+       
 
         //[ForeignKey(typeof(SettingModel))]
         // public int Set_no { get; set; } //Setting表の外部キー
@@ -28,9 +29,11 @@ namespace MuscleTrainingRecords00
         /********************インサートメソッド**********************/
         public static void InsertRecords(int m_weight, int m_leg, int m_set, DateTime m_date)
         {
+           
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
+               
                 try
                 {
                     //データベースにFoodテーブルを作成する
@@ -50,10 +53,13 @@ namespace MuscleTrainingRecords00
         /*******************セレクトメソッド**************************************/
         public static List<RecordsModel> SelectRecords()
         {
+            
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
+                db.DropTable<RecordsModel>();
                 try
                 {
+                    
                     //データベースに指定したSQLを発行
                     return db.Query<RecordsModel>("SELECT * FROM [Records]");
                    // ORDER BY[M_date]
@@ -80,6 +86,7 @@ namespace MuscleTrainingRecords00
 
                     db.Delete<RecordsModel>(m_no);//デリートで渡す値は主キーじゃないといけない説
                     db.Commit();
+                   
                 }
                 catch (Exception e)
                 {
