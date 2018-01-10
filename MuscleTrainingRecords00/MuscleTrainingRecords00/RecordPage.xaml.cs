@@ -19,21 +19,23 @@ namespace MuscleTrainingRecords00
             InitializeComponent();
         }
 
-        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
-        {
-            RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
-
-            DisplayAlert("", "保存されました", "OK");
-
-            Navigation.PushAsync(new RecordListPage());
-
-        }
+   
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
             yyyymmdd = new DateTime(DatePicker.Date.Year, DatePicker.Date.Month, DatePicker.Date.Day);
 
 
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+            RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
+
+            DisplayAlert("", "保存されました", "OK");
+
+            Navigation.PushAsync(new RecordListPage());
         }
     }
 }
