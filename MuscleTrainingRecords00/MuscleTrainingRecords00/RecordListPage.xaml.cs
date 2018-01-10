@@ -12,6 +12,8 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
+        private Button button1;
+
         public RecordListPage()
         {
             InitializeComponent();
@@ -44,9 +46,11 @@ namespace MuscleTrainingRecords00
             }
             Content = layout;
 
-            Button button1 = new Button
+
+            button1 = new Button
             { // button1初期化
-                Text = "button"
+                Text = "button",
+                HorizontalOptions = LayoutOptions.EndAndExpand
             };
         }
         
