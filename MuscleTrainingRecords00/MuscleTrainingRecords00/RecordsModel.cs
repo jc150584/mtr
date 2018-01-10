@@ -36,7 +36,7 @@ namespace MuscleTrainingRecords00
                     //データベースにFoodテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
-                    db.Insert(new RecordsModel() { M_no = m_no, M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date });
+                    db.Insert(new RecordsModel() { M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date });
                     db.Commit();
                 }
                 catch (Exception e)
