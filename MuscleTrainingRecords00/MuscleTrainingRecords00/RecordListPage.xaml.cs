@@ -34,7 +34,7 @@ namespace MuscleTrainingRecords00
             var record = RecordsModel.SelectRecords();
             foreach (var Memo in record)
             {
-                layout.Children.Add(new Label { Text = RecordsModel.SelectRecords.ToString()});
+                layout.Children.Add(new Label { Text = Memo.M_weight.ToString()});
                 
             }
         }
