@@ -14,11 +14,11 @@ namespace MuscleTrainingRecords00
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int M_no { get; set; } //筋トレNo 主キー
 
-        public string M_weight { get; set; } //重量
+        public int M_weight { get; set; } //重量
 
-        public string M_leg { get; set; } //回数
+        public int M_leg { get; set; } //回数
 
-        public string M_set { get; set; } //セット数
+        public int M_set { get; set; } //セット数
 
         public DateTime M_date { get; set; } //日付
 
@@ -26,7 +26,7 @@ namespace MuscleTrainingRecords00
         // public int Set_no { get; set; } //Setting表の外部キー
 
         /********************インサートメソッド**********************/
-        public static void InsertRecords(string m_weight, string m_leg, string m_set, DateTime m_date)
+        public static void InsertRecords(int m_weight, int m_leg, int m_set, DateTime m_date)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
