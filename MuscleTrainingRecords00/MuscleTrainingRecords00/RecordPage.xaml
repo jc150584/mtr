@@ -99,7 +99,7 @@
                     Clicked="Insert_Clicked"
                     HorizontalOptions="EndAndExpand"
                     FontSize="15"
-                    Clicked="Button_Clicked"/>
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

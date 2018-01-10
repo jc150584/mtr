@@ -28,7 +28,7 @@ namespace MuscleTrainingRecords00
 
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Insert_Clicked(object sender, EventArgs e)
         {
 
             RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
