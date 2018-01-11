@@ -29,10 +29,10 @@ namespace MuscleTrainingRecords00
             }
             Content = layout;
         }*/
-            if (RecordsModel.SelectRecords -= null)
-            {
+            
                 var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
                 var record = RecordsModel.SelectRecords();
+            if(record != null) { 
 
                 foreach (var Memo in record)
                 {
