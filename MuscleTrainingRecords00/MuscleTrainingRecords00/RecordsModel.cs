@@ -29,11 +29,9 @@ namespace MuscleTrainingRecords00
         /********************インサートメソッド**********************/
         public static void InsertRecords(int m_weight, int m_leg, int m_set, DateTime m_date)
         {
-           
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
-               
                 try
                 {
                     //データベースにFoodテーブルを作成する

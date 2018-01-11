@@ -12,8 +12,6 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
-       
-
         public RecordListPage()
         {
             InitializeComponent();
@@ -32,7 +30,7 @@ namespace MuscleTrainingRecords00
             Content = layout;
         }*/
 
-            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Start, Margin = new Thickness { Top = 100 } };
+            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             var record = RecordsModel.SelectRecords();
             foreach (var Memo in record)
             {
@@ -45,11 +43,8 @@ namespace MuscleTrainingRecords00
 
             }
             Content = layout;
-
-
-            
         }
-        
+
         private void RecordListButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MenuPage());
