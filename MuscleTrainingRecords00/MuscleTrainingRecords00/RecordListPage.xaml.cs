@@ -42,9 +42,10 @@ namespace MuscleTrainingRecords00
 
 
             }
-            Content = layout;
+            Content = layout;*/
         }
-        */
+        
+
         private void RecordListButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MenuPage());
