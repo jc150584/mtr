@@ -56,8 +56,9 @@ namespace MuscleTrainingRecords00
                 TextColor = Color.Snow,
                 FontSize = 30,
                 
+                
             };
-
+            insertButton.Clicked += insertButtonClicked;
             layout.Children.Add(insertButton);
            
             Content = layout;
@@ -71,7 +72,7 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new MenuPage());
         }
 
-        private void insertButton(object sender, EventArgs e)
+        private void insertButtonClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new RecordPage());
 
