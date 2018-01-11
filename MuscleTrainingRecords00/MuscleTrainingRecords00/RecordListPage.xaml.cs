@@ -49,8 +49,11 @@ namespace MuscleTrainingRecords00
             }
             var insertButton = new Button
             {
-                HorizontalOptions = LayoutOptions.EndAndExpand,
+                VerticalOptions = LayoutOptions.EndAndExpand,
                 Text = "メニュー追加",
+                BackgroundColor = Color.LightSkyBlue,
+                TextColor = Color.Snow,
+                FontSize = 50,
                 
             };
             layout.Children.Add(insertButton);
