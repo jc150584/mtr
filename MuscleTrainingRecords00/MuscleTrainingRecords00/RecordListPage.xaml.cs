@@ -36,10 +36,10 @@ namespace MuscleTrainingRecords00
 
                 foreach (var Memo in record)
                 {
-                    layout.Children.Add(new Label { Text = Memo.M_date.ToString("yyyy/MM/dd") });
-                    layout.Children.Add(new Label { Text = Memo.M_weight.ToString() });
-                    layout.Children.Add(new Label { Text = Memo.M_set.ToString() });
-                    layout.Children.Add(new Label { Text = Memo.M_leg.ToString() });
+                    layout.Children.Add(new Label { Text = Memo.M_date.ToString("yyyy/MM/dd",Memo.M_weight.ToString(), Memo.M_set.ToString(), Memo.M_leg.ToString()) });
+                    //layout.Children.Add(new Label { Text = Memo.M_weight.ToString() });
+                    //layout.Children.Add(new Label { Text = Memo.M_set.ToString() });
+                    //layout.Children.Add(new Label { Text = Memo.M_leg.ToString() });
 
 
 
