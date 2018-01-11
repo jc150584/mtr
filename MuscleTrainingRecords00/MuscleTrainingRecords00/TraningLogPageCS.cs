@@ -16,6 +16,7 @@ namespace MuscleTrainingRecords00
             {
                 Children = {
                     new Label {
+
                         Text = "Welcome to LogPage!",
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.CenterAndExpand
