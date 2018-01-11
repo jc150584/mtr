@@ -29,21 +29,27 @@ namespace MuscleTrainingRecords00
             }
             Content = layout;
         }*/
-
-            /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
-            var record = RecordsModel.SelectRecords();
-            foreach (var Memo in record)
+            if (RecordsModel.SelectRecords -= null)
             {
-                layout.Children.Add(new Label { Text = Memo.M_date.ToString() });
-                layout.Children.Add(new Label { Text = Memo.M_weight.ToString() });
-                layout.Children.Add(new Label { Text = Memo.M_set.ToString() });
-                layout.Children.Add(new Label { Text = Memo.M_leg.ToString() });
+                var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+                var record = RecordsModel.SelectRecords();
+
+                foreach (var Memo in record)
+                {
+                    layout.Children.Add(new Label { Text = Memo.M_date.ToString() });
+                    layout.Children.Add(new Label { Text = Memo.M_weight.ToString() });
+                    layout.Children.Add(new Label { Text = Memo.M_set.ToString() });
+                    layout.Children.Add(new Label { Text = Memo.M_leg.ToString() });
 
 
 
+                }
+
+                Content = layout;
             }
-            Content = layout;*/
+            
         }
+
         
 
         private void RecordListButton(object sender, EventArgs e)

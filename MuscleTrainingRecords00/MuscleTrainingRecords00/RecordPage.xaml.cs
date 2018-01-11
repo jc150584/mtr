@@ -21,13 +21,14 @@ namespace MuscleTrainingRecords00
         }
 
 
-        private void Insert_Clicked(object sender, EventArgs e)
+        public void Insert_Clicked(object sender, EventArgs e)
         {
 
             int WeightText = int.Parse(Weight.Text);
             int LegText = int.Parse(Leg.Text);
             int SetText = int.Parse(Set.Text);
-
+            
+            
             //RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
             RecordsModel.InsertRecords(WeightText, LegText, SetText, yyyymmdd);
 
