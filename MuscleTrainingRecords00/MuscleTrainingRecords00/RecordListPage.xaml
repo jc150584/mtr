@@ -21,7 +21,7 @@
 
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
-            <Button  Clicked="Button_Clicked" Text="インサート試し" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
+            
 
         </StackLayout>
     </ContentPage.Content>
