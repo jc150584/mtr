@@ -49,26 +49,29 @@ namespace MuscleTrainingRecords00
             }
             var insertButton = new Button
             {
+                HorizontalOptions=LayoutOptions.EndAndExpand,
                 VerticalOptions = LayoutOptions.EndAndExpand,
                 Text = "メニュー追加",
                 BackgroundColor = Color.LightSkyBlue,
                 TextColor = Color.Snow,
-                FontSize = 50,
+                FontSize = 30,
                 
             };
+
             layout.Children.Add(insertButton);
+           
             Content = layout;
 
         }
 
-        
 
+        
         private void RecordListButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MenuPage());
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void insertButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new RecordPage());
 
