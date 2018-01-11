@@ -15,19 +15,17 @@ namespace MuscleTrainingRecords00
 
         public LineChart()
         {
-            DataPoint[] itemList = getItemList();
+            DataPoint[] BWeightList = getItemList();
 
             this.Model = new PlotModel { Title = "" };
 
-            var X_line = new LineSeries() { Title = "体重" };
-            X_line.Color = OxyColors.Red;
+            var BweightLine = new LineSeries() { Title = "体重" };
+            BweightLine.Color = OxyColors.Red;
 
-            //var Y_line = new LineSeries() { Title = "体脂肪" };
-            //Y_line.Color = OxyColors.Blue;
 
-            foreach (DataPoint dp in itemList)
+            foreach (DataPoint dp in BWeightList)
             {
-                X_line.Points.Add(dp);
+                BweightLine.Points.Add(dp);
 
             }
             /*foreach (DataPoint dp in itemList)
@@ -36,9 +34,28 @@ namespace MuscleTrainingRecords00
 
             }*/
 
-            X_line.Points.Add(new DataPoint(3, 3));
            // Model.Series.Add(Y_line);
-            Model.Series.Add(X_line);
+            Model.Series.Add(BweightLine);
+
+            DataPoint[] BFattList = getBFatList();
+
+            var BFatLine = new LineSeries() { Title = "体脂肪" };
+            BFatLine.Color = OxyColors.Blue;
+
+            foreach (DataPoint dp in BFattList)
+            {
+                BFatLine.Points.Add(dp);
+
+            }
+            /*foreach (DataPoint dp in itemList)
+            {
+                Y_line.Points.Add(dp);
+
+            }*/
+
+            // Model.Series.Add(Y_line);
+            Model.Series.Add(BFatLine);
+
 
             var axisY = new LinearAxis() //横
             {
@@ -67,6 +84,19 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
                 points[i++] = new DataPoint(item.ID, item.Bweight);
+            }
+            return points;
+        }
+        private static DataPoint[] getBFatList()
+        {
+            TodoItemDatabase itemDataBase = TodoItemDatabase.getDatabase();
+            Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
+            List<TodoItem> itemList = taskItemList.Result;
+            DataPoint[] points = new DataPoint[itemList.Count];
+            int i = 0;
+            foreach (TodoItem item in itemList)
+            {
+                points[i++] = new DataPoint(item.ID, item.Bfat);
             }
             return points;
         }
