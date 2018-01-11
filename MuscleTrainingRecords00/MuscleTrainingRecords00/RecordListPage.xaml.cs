@@ -53,6 +53,7 @@ namespace MuscleTrainingRecords00
                 Text = "メニュー追加",
                 
             };
+            layout.Children.Add(insertButton);
             Content = layout;
 
         }
