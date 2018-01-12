@@ -5,20 +5,11 @@
              Title="メニュー一覧">
     <ContentPage.Content>
 
-
         <StackLayout Orientation="Vertical"
                      Spacing="20">
 
-            <StackLayout.Margin>
+            <Label Text=""/>
 
-                <!-- iOSはトップに 20 の余白が必要 -->
-                <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0, 20, 0, 0"
-                     Android="0, 0, 0, 0"
-                     WinPhone="0, 0, 0, 0" />
-            </StackLayout.Margin>
-
-            <!--
             <Picker x:Name="Sort" Title="並び替え"
                     SelectedIndexChanged="Sort_SelectedIndexChanged_1">
                 <Picker.Items>
@@ -26,83 +17,53 @@
                     <x:String>負荷度</x:String>
                 </Picker.Items>
             </Picker>
-            -->
+
+            <SearchBar x:Name="Select" 
+                           Placeholder = "入力してください"
+                           SearchButtonPressed="Select_SearchButtonPressed"/>
 
 
-            <SearchBar
-             x:Name="Select"
-             FontFamily = "Poornut"
-             FontSize = "20"
-             HorizontalTextAlignment = "Center"
-             Placeholder = "入力してください" 
-                SearchButtonPressed="Select_SearchButtonPressed"/>
-
-            <!---WidthRequest追加-->
+            <StackLayout Orientation="Horizontal">
 
 
-            <StackLayout Orientation="Horizontal"
-                             BackgroundColor="CornflowerBlue"
-                             VerticalOptions="CenterAndExpand"
-                             HorizontalOptions="StartAndExpand"
-                             HeightRequest="50"
-                             WidthRequest="100"
-                             
-                             >
-
-
-                <Button 
+                <Button x:Name="全部"
                         Text="全部"
-                        
-                        
-                        Clicked="全部_Clicked"
-                        TextColor="White"
-                    FontSize="Medium"
-                    />
+                        WidthRequest="70"
+                        HeightRequest="15"
+                        Clicked="全部_Clicked"/>
 
-                <Button 
+                <Button x:Name="腹"
                         Text="腹"
-                       
-                        Clicked="腹_Clicked"
-                        TextColor="White"
-                     FontSize="Medium"/>
+                        WidthRequest="70"
+                        HeightRequest="15"
+                        Clicked="腹_Clicked"/>
 
 
-                <Button 
+                <Button x:Name="腕"
                         Text="腕"
-                        
-                        Clicked="腕_Clicked"
-                        TextColor="White"
-                     FontSize="Medium"/>
+                        WidthRequest="70"
+                        HeightRequest="15"
+                        Clicked="腕_Clicked"/>
 
 
-                <Button 
+                <Button x:Name="背中"
                         Text="背中"
-                        
-                        Clicked="背中_Clicked"
-                         TextColor="White"
-                     FontSize="Medium"/>
+                        WidthRequest="70"
+                        HeightRequest="15"
+                        Clicked="背中_Clicked"/>
 
 
-                <Button 
-                        Text="胸"
-                        
-                        Clicked="胸_Clicked"
-                        TextColor="White"
-                     FontSize="Medium"/>
+                <Button x:Name="胸肩"
+                        Text="胸肩"
+                        WidthRequest="70"
+                        HeightRequest="15"
+                        Clicked="胸肩_Clicked"/>
 
-                <Button 
-                        Text="肩"
-                       
-                        Clicked="肩_Clicked"
-                         TextColor="White"
-                     FontSize="Medium"/>
-
-                <Button 
+                <Button x:Name="脚"
                         Text="脚"
-                        
-                        Clicked="脚_Clicked"
-                         TextColor="White"
-                     FontSize="Medium"/>
+                         WidthRequest="70"
+                        HeightRequest="15"
+                        Clicked="脚_Clicked"/>
 
 
             </StackLayout>
@@ -113,11 +74,13 @@
                 HeightRequest="0.5"
                 WidthRequest="600"/>
 
+            <StackLayout Orientation="Vertical">
 
-
-            <ListView x:Name="listView"
+                <ListView x:Name="listView"
                       SeparatorColor="Black"
-                        />
+                      ItemTapped="listView_ItemTapped" />
+
+            </StackLayout>
 
 
 

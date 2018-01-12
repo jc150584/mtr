@@ -70,6 +70,8 @@
     <Compile Include="RMPageCS.cs" />
     <Compile Include="TodoItem.cs" />
     <Compile Include="TodoItemDatabase.cs" />
+    <Compile Include="Training.cs" />
+    <Compile Include="TrainingDatabase.cs" />
     <Compile Include="TraningLogPage.xaml.cs">
       <DependentUpon>TraningLogPage.xaml</DependentUpon>
     </Compile>

@@ -1,14 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MuscleTrainingRecords00.MenudetailPage">
+             x:Class="MuscleTrainingRecords00.MenudetaliPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to MenudetailPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical">
 
-            <!--  <ToolbarItem  Name="追加" Activated="追加_Activated"/> -->
+            <Label Text=""
+                   x:Name="Transition"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+
+            <Label Text=""
+                   x:Name="Description"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="EndAndExpand"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

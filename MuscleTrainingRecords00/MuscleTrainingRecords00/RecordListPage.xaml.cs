@@ -39,7 +39,7 @@ namespace MuscleTrainingRecords00
                     layout.Children.Add(new Label { Text = Memo.M_date.ToString("yyyy/MM/dd") , HorizontalOptions = LayoutOptions.Start});
                     layout.Children.Add(new Label { Text = Memo.M_weight.ToString(), HorizontalOptions = LayoutOptions.Start });
                     layout.Children.Add(new Label { Text = Memo.M_set.ToString(),  HorizontalOptions = LayoutOptions.Start });
-                    layout.Children.Add(new Label { Text = Memo.M_leg.ToString(),  HorizontalOptions = LayoutOptions.Start });
+                    layout.Children.Add(new Label { Text = Memo.M_leg.ToString(),  HorizontalOptions = LayoutOptions.Start});
                     
                     
 
@@ -74,6 +74,7 @@ namespace MuscleTrainingRecords00
             layout.Children.Add(RefreshingButton);
 
             Content = layout;*/
+           
 
         }
 
