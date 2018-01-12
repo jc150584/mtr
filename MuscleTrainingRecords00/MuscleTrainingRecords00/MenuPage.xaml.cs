@@ -186,11 +186,11 @@ namespace MuscleTrainingRecords00
 
             Training training = (Training)listView.SelectedItem;
             String l = training.Menu;
-            //String m = training.Desc;
+            String m = training.Desc;
 
             //Navigation.PushAsync(new MenudetaliPage(l));
 
-            Navigation.PushAsync(new MenudetaliPage(l, m));
+            Navigation.PushAsync(new MenudetaliPage(l,m));
         }
     }
 }
