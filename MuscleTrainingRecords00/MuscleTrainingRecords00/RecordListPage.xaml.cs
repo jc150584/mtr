@@ -47,7 +47,7 @@ namespace MuscleTrainingRecords00
                 
                 
             }
-            */
+            
             var insertButton = new Button
             {
                 HorizontalOptions=LayoutOptions.EndAndExpand,
@@ -73,7 +73,7 @@ namespace MuscleTrainingRecords00
             RefreshingButton.Clicked += RefreshingButtonClicked;
             layout.Children.Add(RefreshingButton);
 
-            Content = layout;
+            Content = layout;*/
 
         }
 
@@ -84,11 +84,12 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new MenuPage());
         }
 
-        private void insertButtonClicked(object sender, EventArgs e)
+       /* private void insertButtonClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new RecordPage());
 
         }
+        */
 
         private async void RefreshingButtonClicked(object sender , EventArgs e)
         {
