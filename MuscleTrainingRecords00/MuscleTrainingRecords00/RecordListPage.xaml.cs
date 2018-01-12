@@ -37,7 +37,7 @@ namespace MuscleTrainingRecords00
                 foreach (var Memo in record)
                 {
                     layout.Children.Add(new Label { Text = Memo.M_date.ToString("yyyy/MM/dd") ,HorizontalOptions});
-                    layout.Children.Add(new Label { Text = Memo.M_weight.ToString(),HorizontalOptions });
+                    layout.Children.Add(new Label { Text = Memo.M_weight.ToString(), HorizontalOptions });
                     layout.Children.Add(new Label { Text = Memo.M_set.ToString(), HorizontalOptions });
                     layout.Children.Add(new Label { Text = Memo.M_leg.ToString(),HorizontalOptions });
 
@@ -58,6 +58,15 @@ namespace MuscleTrainingRecords00
                 
                 
             };
+            var RefreshingButton = new Button
+            {
+                HorizontalOptions = LayoutOptions.EndAndExpand,
+                VerticalOptions = LayoutOptions.EndAndExpand,
+                Text = "更新",
+                BackgroundColor = Color.LightSkyBlue,
+                TextColor = Color.Snow,
+                FontSize = 30,
+            };
             insertButton.Clicked += insertButtonClicked;
             layout.Children.Add(insertButton);
            
@@ -77,6 +86,16 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new RecordPage());
 
         }
-        
+
+        private async void RefreshingButton(object sender , EventArgs e)
+        {
+            await Task.Delay(1000);
+
+            list.IsRefreshing = false;
+
+            InitializeComponent();
+        }
+
+
     }
 }
