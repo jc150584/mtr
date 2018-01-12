@@ -30,7 +30,7 @@ namespace MuscleTrainingRecords00
             Content = layout;
         }*/
             
-                var layout = new StackLayout {VerticalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+                /*var layout = new StackLayout {VerticalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
                 var record = RecordsModel.SelectRecords();
             if(record != null) { 
 
@@ -40,13 +40,14 @@ namespace MuscleTrainingRecords00
                     layout.Children.Add(new Label { Text = Memo.M_weight.ToString(), HorizontalOptions = LayoutOptions.Start });
                     layout.Children.Add(new Label { Text = Memo.M_set.ToString(),  HorizontalOptions = LayoutOptions.Start });
                     layout.Children.Add(new Label { Text = Memo.M_leg.ToString(),  HorizontalOptions = LayoutOptions.Start });
-
-
+                    
+                    
 
                 }
-
+                
                 
             }
+            */
             var insertButton = new Button
             {
                 HorizontalOptions=LayoutOptions.EndAndExpand,
@@ -69,7 +70,9 @@ namespace MuscleTrainingRecords00
             };
             insertButton.Clicked += insertButtonClicked;
             layout.Children.Add(insertButton);
-           
+            RefreshingButton.Clicked += RefreshingButtonClicked;
+            layout.Children.Add(RefreshingButton);
+
             Content = layout;
 
         }
@@ -87,7 +90,19 @@ namespace MuscleTrainingRecords00
 
         }
 
-        
+        private async void RefreshingButtonClicked(object sender , EventArgs e)
+        {
+            await Task.Delay(1000);
+            list.IsRefreshing = false;
+
+            InitializeComponent();
+
+            
+            
+        }
+
+
+
 
 
     }

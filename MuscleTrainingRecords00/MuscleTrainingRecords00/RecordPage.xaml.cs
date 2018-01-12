@@ -27,6 +27,8 @@ namespace MuscleTrainingRecords00
             int WeightText = int.Parse(Weight.Text);
             int LegText = int.Parse(Leg.Text);
             int SetText = int.Parse(Set.Text);
+
+            
             
             
             //RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
@@ -42,5 +44,6 @@ namespace MuscleTrainingRecords00
 
 
         }
+        
     }
 }

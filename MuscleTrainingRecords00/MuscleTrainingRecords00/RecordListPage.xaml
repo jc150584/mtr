@@ -16,6 +16,51 @@
                      Android="0, 0, 0, 0"
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
+            
+            <ListView ItemsSource="{Binding Records}"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="OnRefreshing"
+                      HasUnevenRows="true"
+                      x:Name="list">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,20,10,20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding M_date}" 
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontSize="Large"/>
+                                <Grid Grid.Column="1" Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding M_Weight}" 
+                                       Grid.Column="0" Grid.Row="0"
+                                       HorizontalOptions="End"
+                                       FontSize="Large"/>
+                                    <Label Text="日" 
+                                       Grid.Column="1" Grid.Row="0"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="End"/>
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
 
 
