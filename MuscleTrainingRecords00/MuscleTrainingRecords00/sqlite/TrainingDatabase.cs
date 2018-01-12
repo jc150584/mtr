@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using SQLite;
 using Xamarin.Forms;
 
-namespace MuscleTrainingRecords00
+namespace MuscleTrainingRecords00.sqlite
 {
     class TrainingDatabase
     {

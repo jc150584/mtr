@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MuscleTrainingRecords00
+namespace MuscleTrainingRecords00.sqlite
 {
     // https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/databases/
     public interface IFileHelper
