@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using MuscleTrainingRecords00.sqlite;
+using MuscleTrainingRecords00.TrainingDatabase;
 
 namespace MuscleTrainingRecords00
 {
