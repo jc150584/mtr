@@ -67,6 +67,7 @@
                       SeparatorColor="Black"
                       ItemTapped="Records1_ItemTapped" />
            -->
+            <Label x:Name="name"/>
 
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
