@@ -12,7 +12,7 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
-        public RecordListPage()
+        public  RecordListPage(string i)
         {
             InitializeComponent();
             /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
@@ -74,8 +74,9 @@ namespace MuscleTrainingRecords00
         layout.Children.Add(RefreshingButton);
 
         Content = layout;*/
-        
 
+            Records1.ItemsSource = i;
+            
         }
 
 
@@ -85,24 +86,30 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new MenuPage());
         }
 
-       /* private void insertButtonClicked(object sender, EventArgs e)
+        private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Navigation.PushAsync(new RecordPage());
-
-        }
-        */
-
-       /* private async void OnRefreshing(object sender , EventArgs e)
-        {
-            await Task.Delay(1000);
-            list.IsRefreshing = false;
-
-            InitializeComponent();
-
             
-            
+            //Navigation.PushAsync(new RecordPage());
         }
-        */
+
+        /* private void insertButtonClicked(object sender, EventArgs e)
+         {
+             Navigation.PushAsync(new RecordPage());
+
+         }
+         */
+
+        /* private async void OnRefreshing(object sender , EventArgs e)
+         {
+             await Task.Delay(1000);
+             list.IsRefreshing = false;
+
+             InitializeComponent();
+
+
+
+         }
+         */
 
 
 

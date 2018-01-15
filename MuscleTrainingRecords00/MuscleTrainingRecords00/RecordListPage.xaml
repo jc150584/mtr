@@ -63,7 +63,9 @@
             </ListView>
 
             -->
-            <Label x:Name="Records1" />
+            <ListView x:Name="Records1"
+                      SeparatorColor="Black"
+                      ItemTapped="Records1_ItemTapped" />
 
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />

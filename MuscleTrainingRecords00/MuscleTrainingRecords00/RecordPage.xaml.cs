@@ -36,7 +36,7 @@ namespace MuscleTrainingRecords00
 
             DisplayAlert("", "保存されました", "OK");
 
-            Navigation.PushAsync(new RecordListPage());
+            //Navigation.PushAsync(new RecordListPage());
         }
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
