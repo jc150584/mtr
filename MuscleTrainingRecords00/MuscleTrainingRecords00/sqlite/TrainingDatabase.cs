@@ -73,7 +73,9 @@ namespace MuscleTrainingRecords00.sqlite
         {
             if (db == null)
             {
-                db = new TrainingDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TrainingSQLite.db3"));
+//                db = new TrainingDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TrainingSQLite.db3"));
+                db = new TrainingDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+
             }
             return db;
         }

@@ -68,7 +68,6 @@
       <DependentUpon>RMPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="RMPageCS.cs" />
-    <Compile Include="sqlite\IFileHelper.cs" />
     <Compile Include="sqlite\TrainingDatabase.cs" />
     <Compile Include="TodoItem.cs" />
     <Compile Include="TodoItemDatabase.cs" />
