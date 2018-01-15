@@ -158,6 +158,7 @@ namespace MuscleTrainingRecords00
 
         private void Sort_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+
             //int s = Sort.SelectedIndex;
             String si = (String)Sort.SelectedItem;
             //if (si==0)
@@ -186,11 +187,11 @@ namespace MuscleTrainingRecords00
 
             Training training = (Training)listView.SelectedItem;
             String l = training.Menu;
-            //String m = training.Desc;
+            String m = training.Desc;
 
             //Navigation.PushAsync(new MenudetaliPage(l));
 
-            Navigation.PushAsync(new MenudetaliPage(l));//m消した
+            Navigation.PushAsync(new MenudetaliPage(l,m));
         }
     }
 }
