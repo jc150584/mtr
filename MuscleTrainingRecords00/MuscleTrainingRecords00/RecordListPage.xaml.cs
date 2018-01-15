@@ -12,7 +12,7 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
-        public RecordListPage()
+        public RecordListPage(string i)
         {
             InitializeComponent();
             /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
@@ -29,52 +29,53 @@ namespace MuscleTrainingRecords00
             }
             Content = layout;
         }*/
-            
-                /*var layout = new StackLayout {VerticalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
-                var record = RecordsModel.SelectRecords();
-            if(record != null) { 
 
-                foreach (var Memo in record)
-                {
-                    layout.Children.Add(new Label { Text = Memo.M_date.ToString("yyyy/MM/dd") , HorizontalOptions = LayoutOptions.Start});
-                    layout.Children.Add(new Label { Text = Memo.M_weight.ToString(), HorizontalOptions = LayoutOptions.Start });
-                    layout.Children.Add(new Label { Text = Memo.M_set.ToString(),  HorizontalOptions = LayoutOptions.Start });
-                    layout.Children.Add(new Label { Text = Memo.M_leg.ToString(),  HorizontalOptions = LayoutOptions.Start});
-                    
-                    
+            /*var layout = new StackLayout {VerticalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            var record = RecordsModel.SelectRecords();
+        if(record != null) { 
 
-                }
-                
-                
+            foreach (var Memo in record)
+            {
+                layout.Children.Add(new Label { Text = Memo.M_date.ToString("yyyy/MM/dd") , HorizontalOptions = LayoutOptions.Start});
+                layout.Children.Add(new Label { Text = Memo.M_weight.ToString(), HorizontalOptions = LayoutOptions.Start });
+                layout.Children.Add(new Label { Text = Memo.M_set.ToString(),  HorizontalOptions = LayoutOptions.Start });
+                layout.Children.Add(new Label { Text = Memo.M_leg.ToString(),  HorizontalOptions = LayoutOptions.Start});
+
+
+
             }
-            
-            var insertButton = new Button
-            {
-                HorizontalOptions=LayoutOptions.EndAndExpand,
-                VerticalOptions = LayoutOptions.EndAndExpand,
-                Text = "メニュー追加",
-                BackgroundColor = Color.LightSkyBlue,
-                TextColor = Color.Snow,
-                FontSize = 30,
-                
-                
-            };
-            var RefreshingButton = new Button
-            {
-                HorizontalOptions = LayoutOptions.EndAndExpand,
-                VerticalOptions = LayoutOptions.EndAndExpand,
-                Text = "更新",
-                BackgroundColor = Color.LightSkyBlue,
-                TextColor = Color.Snow,
-                FontSize = 30,
-            };
-            insertButton.Clicked += insertButtonClicked;
-            layout.Children.Add(insertButton);
-            RefreshingButton.Clicked += RefreshingButtonClicked;
-            layout.Children.Add(RefreshingButton);
 
-            Content = layout;*/
-           
+
+        }
+
+        var insertButton = new Button
+        {
+            HorizontalOptions=LayoutOptions.EndAndExpand,
+            VerticalOptions = LayoutOptions.EndAndExpand,
+            Text = "メニュー追加",
+            BackgroundColor = Color.LightSkyBlue,
+            TextColor = Color.Snow,
+            FontSize = 30,
+
+
+        };
+        var RefreshingButton = new Button
+        {
+            HorizontalOptions = LayoutOptions.EndAndExpand,
+            VerticalOptions = LayoutOptions.EndAndExpand,
+            Text = "更新",
+            BackgroundColor = Color.LightSkyBlue,
+            TextColor = Color.Snow,
+            FontSize = 30,
+        };
+        insertButton.Clicked += insertButtonClicked;
+        layout.Children.Add(insertButton);
+        RefreshingButton.Clicked += RefreshingButtonClicked;
+        layout.Children.Add(RefreshingButton);
+
+        Content = layout;*/
+
+            Records1.Text = i;
 
         }
 
@@ -92,7 +93,7 @@ namespace MuscleTrainingRecords00
         }
         */
 
-        private async void OnRefreshing(object sender , EventArgs e)
+       /* private async void OnRefreshing(object sender , EventArgs e)
         {
             await Task.Delay(1000);
             list.IsRefreshing = false;
@@ -102,7 +103,7 @@ namespace MuscleTrainingRecords00
             
             
         }
-
+        */
 
 
 

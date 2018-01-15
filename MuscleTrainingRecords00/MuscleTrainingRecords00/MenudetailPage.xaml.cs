@@ -22,6 +22,13 @@ namespace MuscleTrainingRecords00
             Description.Text = m;
         }
 
+        private void addItemButton_Clicked(object sender, EventArgs e)
+        {
+            string i = Transition.Text;
+            Navigation.PushAsync(new RecordListPage(i);
+
+        }
+
         /*public MenudetaliPage(String l)
         {
         this.l = l;

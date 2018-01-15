@@ -189,6 +189,8 @@ namespace MuscleTrainingRecords00
             String l = training.Menu;
             String m = training.Desc;
 
+           
+
             //Navigation.PushAsync(new MenudetaliPage(l));
 
             Navigation.PushAsync(new MenudetaliPage(l,m));

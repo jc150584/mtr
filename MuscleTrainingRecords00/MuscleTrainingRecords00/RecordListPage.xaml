@@ -16,7 +16,7 @@
                      Android="0, 0, 0, 0"
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
-            
+            <!--
             <ListView ItemsSource="{Binding Records}"
                       IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
@@ -62,7 +62,8 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-
+            -->
+            <Label x:Name="Records1" />
 
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
