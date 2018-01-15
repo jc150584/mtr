@@ -15,7 +15,7 @@ namespace MuscleTrainingRecords00
     {
         DateTime yyyymmdd;
 
-        public RecordPage(string i)
+        public RecordPage()
         {
             InitializeComponent();
         }
