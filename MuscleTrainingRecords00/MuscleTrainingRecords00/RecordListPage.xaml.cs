@@ -76,7 +76,7 @@ namespace MuscleTrainingRecords00
 
         Content = layout;*/
             DisplayAlert("test", "test", "OK");
-            test = i;
+            //test = i;
 
             //Records1.ItemsSource = test;
 
