@@ -12,7 +12,7 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
-        public RecordListPage(string i)
+        public RecordListPage()
         {
             InitializeComponent();
             /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
@@ -74,8 +74,7 @@ namespace MuscleTrainingRecords00
         layout.Children.Add(RefreshingButton);
 
         Content = layout;*/
-
-            Records1.Text = i;
+        
 
         }
 
