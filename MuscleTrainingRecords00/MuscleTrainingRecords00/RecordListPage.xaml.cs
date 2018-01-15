@@ -76,9 +76,9 @@ namespace MuscleTrainingRecords00
 
         Content = layout;*/
             DisplayAlert("test", "test", "OK");
-            test = i;
+            /*test = i;
 
-            Records1.ItemsSource = test;
+            Records1.ItemsSource = test;*/
 
         }
 
@@ -89,12 +89,12 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new MenuPage());
         }
 
-        private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)
+        /*private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             string i = test;
 
            Navigation.PushAsync(new RecordPage(i));
-        }
+        }*/
 
         /* private void insertButtonClicked(object sender, EventArgs e)
          {
