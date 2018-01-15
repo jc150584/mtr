@@ -12,6 +12,7 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
+        private string test;
         public  RecordListPage(string i)
         {
             InitializeComponent();
@@ -74,9 +75,11 @@ namespace MuscleTrainingRecords00
         layout.Children.Add(RefreshingButton);
 
         Content = layout;*/
+            DisplayAlert("test", "test", "OK");
+            test = i;
 
-            Records1.ItemsSource = i;
-            
+            Records1.ItemsSource = test;
+
         }
 
 
@@ -88,8 +91,9 @@ namespace MuscleTrainingRecords00
 
         private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            
-            //Navigation.PushAsync(new RecordPage());
+            string i = test;
+
+           Navigation.PushAsync(new RecordPage(i));
         }
 
         /* private void insertButtonClicked(object sender, EventArgs e)
