@@ -13,7 +13,7 @@ namespace MuscleTrainingRecords00
     public partial class RecordListPage : ContentPage
     {
         private string test;
-        public  RecordListPage(string i)
+        public  RecordListPage()
         {
             InitializeComponent();
             /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
