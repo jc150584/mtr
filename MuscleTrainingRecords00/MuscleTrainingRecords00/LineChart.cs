@@ -140,12 +140,12 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            double date = double.Parse(DateTime.Now.ToString());
+            //double date = double.Parse(DateTime.Now.ToString());
 
             foreach (TodoItem item in itemList)
             {
-                
-                points[i++] = new DataPoint(date, item.Bweight);//追加
+             
+                points[i++] = new DataPoint(double.Parse(item.Created.ToString()), item.Bweight);//追加 X軸　Y軸
 
             }
             return points;
@@ -158,10 +158,10 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            double date = double.Parse(DateTime.Now.ToString());
+            //double date = double.Parse(DateTime.Now.ToString());
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(date, item.Bfat);//追加
+                points[i++] = new DataPoint(double.Parse(item.Created.ToString()), item.Bfat);//追加　　X軸　Y軸
             }
             return points;
         }

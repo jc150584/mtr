@@ -30,10 +30,10 @@ namespace MuscleTrainingRecords00
             //Boolean bDone = eDone.IsToggled;
             int B_Weight = int.Parse(bWeight.Text);
             int B_Fat = int.Parse(bFat.Text);
-            DateTime dCreated = eCreated.Date;
-            DateTime datenow = DateTime.Now;
-          
-            TodoItem item = new TodoItem() { Created = datenow, Bweight = B_Weight, Bfat = B_Fat /*, Created = dCreated, Bfat = B_Fat*/ };//追加
+            DateTime dCreated =  DateTime.Now; //変更 eCreated.Date
+
+
+            TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat /*, Created = dCreated, Bfat = B_Fat*/ };//追加
             db.SaveItemAsync(item);
             DisplayAlert("", "記録されました", "OK");
             Application.Current.MainPage = new MainPage();
