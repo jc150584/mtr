@@ -21,9 +21,6 @@ namespace MuscleTrainingRecords00
 
             this.Model = new PlotModel { Title = "" };
 
-            /* var BweightLine = new LineSeries() { Title = "体重",MarkerType = MarkerType.Circle };
-             BweightLine.Color = OxyColors.Red;
-             BweightLine.MarkerType = MarkerType.Circle;*/
 
 
 
@@ -55,27 +52,18 @@ namespace MuscleTrainingRecords00
                 BweightLine.Points.Add(dp);
                 BweightLine.MarkerType = MarkerType.Circle;
             }
-            /*foreach (DataPoint dp in itemList)
-            {
-                Y_line.Points.Add(dp);
-
-            }*/
-
-           // Model.Series.Add(Y_line);
+       
             Model.Series.Add(BweightLine);
 
             DataPoint[] BFattList = getBFatList();
 
-            /*var BFatLine = new LineSeries() { Title = "体脂肪" };
-            BFatLine.Color = OxyColors.Blue;
-            BFatLine.MarkerType = MarkerType.Circle;*/
 
             var BfatLine = new LineSeries
             {
                 Title = "体脂肪率",
                 StrokeThickness = 1,
 
-                MarkerType = MarkerType.Circle,
+                MarkerType = MarkerType.Circle, 
 
                 MarkerStroke = OxyColors.GreenYellow,
 
@@ -97,13 +85,7 @@ namespace MuscleTrainingRecords00
                
 
             }
-            /*foreach (DataPoint dp in itemList)
-            {
-                Y_line.Points.Add(dp);
-
-            }*/
-
-            // Model.Series.Add(Y_line);
+           
             Model.Series.Add(BfatLine);
 
 
@@ -132,15 +114,7 @@ namespace MuscleTrainingRecords00
             
            
 
-          /* 日付　 var axisX = new DateTimeAxis()
-            {
-                Title = "日付",
-                Position = AxisPosition.Bottom,
-             
-                MajorGridlineStyle = LineStyle.Solid,
-                MinorGridlineStyle = LineStyle.Dot,
-            };
-            Model.Axes.Add(axisX);*/
+         
 
         }
 
