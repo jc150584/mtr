@@ -143,7 +143,7 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
                
-                points[i++] = new DataPoint(DateTime.Now.Day, item.Bweight);//追加
+                points[i++] = new DataPoint(item.day, item.Bweight);//追加
 
             }
             return points;
@@ -159,7 +159,7 @@ namespace MuscleTrainingRecords00
            
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(DateTime.Now.Day, item.Bfat);//追加
+                points[i++] = new DataPoint(item.day, item.Bfat);//追加
             }
             return points;
         }
