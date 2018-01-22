@@ -23,12 +23,6 @@ namespace MuscleTrainingRecords00
             Description.Text = m;
 
             t = l;
-            new Image
-            {
-                Source = ImageSource.FromUri(
-               new Uri("https://i2.wp.com/oxamarin.com/wp-content/uploads/2016/12/りんちゃん.jpg")
-           ),
-            };
         
         }
        
