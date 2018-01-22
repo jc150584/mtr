@@ -87,7 +87,7 @@ namespace MuscleTrainingRecords00
             }*/
 
             // Model.Series.Add(Y_line);
-            Model.Series.Add(BFatLine);
+            Model.Series.Add(BfatLine);
 
 
             var axisY = new LinearAxis() //横
