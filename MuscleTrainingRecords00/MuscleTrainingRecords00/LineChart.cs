@@ -25,7 +25,7 @@ namespace MuscleTrainingRecords00
              BweightLine.Color = OxyColors.Red;
              BweightLine.MarkerType = MarkerType.Circle;*/
 
-           
+
 
             var BweightLine = new LineSeries
             {
@@ -41,7 +41,13 @@ namespace MuscleTrainingRecords00
 
                 DataFieldY = "Value",
 
+                LineStyle = LineStyle.Automatic,
+
+               
+
             };
+            BweightLine.Color = OxyColors.Red;
+
             foreach (DataPoint dp in BWeightList)
             {
                 BweightLine.Points.Add(dp);
@@ -76,7 +82,11 @@ namespace MuscleTrainingRecords00
 
                 DataFieldY = "Value",
 
+                LineStyle = LineStyle.Automatic,
+
             };
+
+            BfatLine.Color = OxyColors.Blue;
 
             foreach (DataPoint dp in BFattList)
             {
