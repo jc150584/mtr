@@ -25,6 +25,7 @@ namespace MuscleTrainingRecords00
             t = l;
         }
 
+
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
             String i = t;
