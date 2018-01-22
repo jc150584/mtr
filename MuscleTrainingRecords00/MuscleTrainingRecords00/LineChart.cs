@@ -111,7 +111,7 @@ namespace MuscleTrainingRecords00
             };
             Model.Axes.Add(axisY);
 
-            var model = new PlotModel { Title = "DateTimeAxis" };
+            
 
             var startDate = DateTime.Now.AddDays(-10);
             var endDate = DateTime.Now;
@@ -119,7 +119,7 @@ namespace MuscleTrainingRecords00
             var minValue = DateTimeAxis.ToDouble(startDate);
             var maxValue = DateTimeAxis.ToDouble(endDate);
 
-            model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" });
+            Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" });
 
 
 
@@ -152,7 +152,7 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            foreach (TodoItem item in itemList)
+            foreach ( TodoItem item in itemList)
             {
                 points[i++] = new DataPoint(item.ID, item.Bfat);
             }
