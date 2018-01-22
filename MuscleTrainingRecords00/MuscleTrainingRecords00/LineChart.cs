@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Collections;
 using System;
+using System.Diagnostics;
 
 namespace MuscleTrainingRecords00
 {
@@ -118,6 +119,7 @@ namespace MuscleTrainingRecords00
 
             var minValue = DateTimeAxis.ToDouble(startDate);
             var maxValue = DateTimeAxis.ToDouble(endDate);
+           
 
             Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" });
 
@@ -138,12 +140,12 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            
+            double date = Convert.ToSingle(DateTime.Today);
 
             foreach (TodoItem item in itemList)
             {
-               
-                points[i++] = new DataPoint(item.Created.Ticks, item.Bweight);//追加
+                
+                points[i++] = new DataPoint(date, item.Bweight);//追加
 
             }
             return points;
@@ -156,10 +158,10 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-           
+            double date = Convert.ToSingle(DateTime.Today);
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(item.Created.Ticks, item.Bfat);//追加
+                points[i++] = new DataPoint(date, item.Bfat);//追加
             }
             return points;
         }
