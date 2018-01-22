@@ -18,7 +18,7 @@ namespace MuscleTrainingRecords00
         {
             InitializeComponent();
         }
-
+       // DateTime yyyymmdd;
 
         /********************ここから追加******************************************/
 
@@ -37,5 +37,11 @@ namespace MuscleTrainingRecords00
             DisplayAlert("", "記録されました", "OK");
             Application.Current.MainPage = new MainPage();
         }
+
+        /*private void eCreated_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            yyyymmdd = new DateTime(eCreated.Date.Year, eCreated.Date.Month,eCreated.Date.Day);
+
+        }*/
     }
 }

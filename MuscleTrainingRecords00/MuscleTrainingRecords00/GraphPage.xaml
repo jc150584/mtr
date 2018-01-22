@@ -100,11 +100,12 @@
 
                 <DatePicker 
                             x:Name="eCreated" 
-                             Format = "yyyy/MM/dd"
+                            Format = "yyyy/MM/dd"
                             WidthRequest="250"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Margin="30"/>
+                            Margin="30"
+                            DateSelected="eCreated_DateSelected" />
 
             </StackLayout>
 

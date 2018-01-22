@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Collections;
 
+
 namespace MuscleTrainingRecords00
 {
     class LineChart
@@ -15,6 +16,7 @@ namespace MuscleTrainingRecords00
 
         public LineChart()
         {
+            
             DataPoint[] BWeightList = getItemList();
 
             this.Model = new PlotModel { Title = "" };
@@ -22,6 +24,8 @@ namespace MuscleTrainingRecords00
             /* var BweightLine = new LineSeries() { Title = "体重",MarkerType = MarkerType.Circle };
              BweightLine.Color = OxyColors.Red;
              BweightLine.MarkerType = MarkerType.Circle;*/
+
+           
 
             var BweightLine = new LineSeries
             {
@@ -90,7 +94,7 @@ namespace MuscleTrainingRecords00
             Model.Series.Add(BfatLine);
 
 
-            var axisY = new LinearAxis() //横
+            var axisY = new LinearAxis() //縦
             {
                 Title = "体重(kg)",
                 IsZoomEnabled = false,
@@ -138,7 +142,7 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
                
-                points[i++] = new DataPoint(double.Parse(item.Created.ToString()), item.Bweight);
+                points[i++] = new DataPoint(item.ID, item.Bweight);
             }
             return points;
         }
@@ -152,7 +156,7 @@ namespace MuscleTrainingRecords00
             int i = 0;
             foreach (TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(double.Parse(item.Created.ToString()), item.Bfat);
+                points[i++] = new DataPoint(item.ID, item.Bfat);
             }
             return points;
         }
