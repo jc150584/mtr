@@ -27,7 +27,7 @@ namespace MuscleTrainingRecords00
             foreach (DataPoint dp in BWeightList)
             {
                 BweightLine.Points.Add(dp);
-
+                BweightLine.MarkerType = MarkerType.Circle;
             }
             /*foreach (DataPoint dp in itemList)
             {
@@ -47,6 +47,7 @@ namespace MuscleTrainingRecords00
             foreach (DataPoint dp in BFattList)
             {
                 BFatLine.Points.Add(dp);
+                BweightLine.MarkerType = MarkerType.Circle;
 
             }
             /*foreach (DataPoint dp in itemList)
