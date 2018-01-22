@@ -105,7 +105,7 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             Margin="30"
-                            DateSelected="eCreated_DateSelected" />
+                            />
 
             </StackLayout>
 
