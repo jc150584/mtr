@@ -6,7 +6,7 @@ using MuscleTrainingRecords;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Collections;
-
+using System;
 
 namespace MuscleTrainingRecords00
 {
@@ -111,10 +111,20 @@ namespace MuscleTrainingRecords00
             };
             Model.Axes.Add(axisY);
 
-            
-           
+            var model = new PlotModel { Title = "DateTimeAxis" };
 
-         
+            var startDate = DateTime.Now.AddDays(-10);
+            var endDate = DateTime.Now;
+
+            var minValue = DateTimeAxis.ToDouble(startDate);
+            var maxValue = DateTimeAxis.ToDouble(endDate);
+
+            model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" });
+
+
+
+
+
 
         }
 
