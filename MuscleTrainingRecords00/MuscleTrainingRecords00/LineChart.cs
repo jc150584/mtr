@@ -140,7 +140,7 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            double date = Convert.ToSingle(DateTime.Today);
+            double date = double.Parse(DateTime.Now.ToString());
 
             foreach (TodoItem item in itemList)
             {
@@ -158,7 +158,7 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            double date = Convert.ToSingle(DateTime.Today);
+            double date = double.Parse(DateTime.Now.ToString());
             foreach ( TodoItem item in itemList)
             {
                 points[i++] = new DataPoint(date, item.Bfat);//追加
