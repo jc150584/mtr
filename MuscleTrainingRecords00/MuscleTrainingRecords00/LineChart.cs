@@ -136,11 +136,14 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
            
             int i = 0;
+
+            
             
             foreach (TodoItem item in itemList)
             {
-               
-                points[i++] = new DataPoint(item.ID, item.Bweight);
+                double s = double.Parse(item.Created.ToString());
+                points[i++] = new DataPoint(s, item.Bweight);
+                
             }
             return points;
         }
