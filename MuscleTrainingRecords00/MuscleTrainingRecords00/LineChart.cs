@@ -70,6 +70,7 @@ namespace MuscleTrainingRecords00
                 ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
                 ExtraGridlineThickness = 3,
                 ExtraGridlineColor = OxyColors.SkyBlue,
+                Title = "体脂肪率"
             };
             Model.Axes.Add(axisY);
         }
