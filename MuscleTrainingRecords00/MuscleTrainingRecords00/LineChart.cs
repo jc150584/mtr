@@ -21,6 +21,7 @@ namespace MuscleTrainingRecords00
 
             var BweightLine = new LineSeries() { Title = "体重",MarkerType = MarkerType.Circle };
             BweightLine.Color = OxyColors.Red;
+            BweightLine.MarkerType = MarkerType.Circle;
 
 
             foreach (DataPoint dp in BWeightList)
@@ -39,8 +40,9 @@ namespace MuscleTrainingRecords00
 
             DataPoint[] BFattList = getBFatList();
 
-            var BFatLine = new LineSeries() { Title = "体脂肪" , MarkerType = MarkerType.Circle};
+            var BFatLine = new LineSeries() { Title = "体脂肪" };
             BFatLine.Color = OxyColors.Blue;
+            BFatLine.MarkerType = MarkerType.Circle;
             
             foreach (DataPoint dp in BFattList)
             {
