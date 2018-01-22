@@ -72,22 +72,7 @@
 
 
 
-                <Label Text="前回比　体重(kg)" 
-                       FontSize="Medium"
-                       WidthRequest="130"/>
-
-                <Entry x:Name="GBWeight"
-                       WidthRequest="130"
-                       Text="             "/>
-
-                <Label Text="体脂肪(%)"
-                       FontSize="Medium"
-                       WidthRequest="130"/>
-
-                <Entry x:Name="GBfat"
-                       WidthRequest="130"
-                       Text="             "/>
-
+                
 
             </StackLayout>
 

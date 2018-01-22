@@ -29,6 +29,7 @@ namespace MuscleTrainingRecords00
 
             var BweightLine = new LineSeries
             {
+                Title = "体重",
                 StrokeThickness = 1,
 
                 MarkerType = MarkerType.Circle,
@@ -42,6 +43,7 @@ namespace MuscleTrainingRecords00
                 DataFieldY = "Value",
 
                 LineStyle = LineStyle.Automatic,
+                
 
                
 
@@ -70,11 +72,12 @@ namespace MuscleTrainingRecords00
 
             var BfatLine = new LineSeries
             {
+                Title = "体脂肪率",
                 StrokeThickness = 1,
 
                 MarkerType = MarkerType.Circle,
 
-                MarkerStroke = OxyColors.Red,
+                MarkerStroke = OxyColors.GreenYellow,
 
                 MarkerFill = OxyColors.SkyBlue,
 
@@ -106,7 +109,7 @@ namespace MuscleTrainingRecords00
 
             var axisY = new LinearAxis() //縦
             {
-                Title = "体重(kg)",
+                Title = "体重(kg)　体脂肪率(%)",
                 IsZoomEnabled = false,
                 Position = AxisPosition.Left,
                 Maximum = 150,
@@ -117,6 +120,7 @@ namespace MuscleTrainingRecords00
                 ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
                 ExtraGridlineThickness = 3,
                 ExtraGridlineColor = OxyColors.SkyBlue,
+                
                 
                 
 
