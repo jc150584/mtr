@@ -19,7 +19,7 @@ namespace MuscleTrainingRecords00
 
             this.Model = new PlotModel { Title = "" };
 
-            var BweightLine = new LineSeries() { Title = "体重" };
+            var BweightLine = new LineSeries() { Title = "体重",MarkerType = MarkerType.Circle };
             BweightLine.Color = OxyColors.Red;
 
 
@@ -39,9 +39,9 @@ namespace MuscleTrainingRecords00
 
             DataPoint[] BFattList = getBFatList();
 
-            var BFatLine = new LineSeries() { Title = "体脂肪" };
+            var BFatLine = new LineSeries() { Title = "体脂肪" , MarkerType = MarkerType.Circle};
             BFatLine.Color = OxyColors.Blue;
-
+            
             foreach (DataPoint dp in BFattList)
             {
                 BFatLine.Points.Add(dp);
@@ -59,7 +59,7 @@ namespace MuscleTrainingRecords00
 
             var axisY = new LinearAxis() //横
             {
-
+                Title = "体重(kg)",
                 IsZoomEnabled = false,
                 Position = AxisPosition.Left,
                 Maximum = 150,
@@ -70,9 +70,27 @@ namespace MuscleTrainingRecords00
                 ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
                 ExtraGridlineThickness = 3,
                 ExtraGridlineColor = OxyColors.SkyBlue,
-                Title = "体脂肪率"
+                
+                
+
+
+
             };
             Model.Axes.Add(axisY);
+
+            
+           
+
+          /* 日付　 var axisX = new DateTimeAxis()
+            {
+                Title = "日付",
+                Position = AxisPosition.Bottom,
+             
+                MajorGridlineStyle = LineStyle.Solid,
+                MinorGridlineStyle = LineStyle.Dot,
+            };
+            Model.Axes.Add(axisX);*/
+
         }
 
         private static DataPoint[] getItemList()
@@ -94,6 +112,7 @@ namespace MuscleTrainingRecords00
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
             List<TodoItem> itemList = taskItemList.Result;
             DataPoint[] points = new DataPoint[itemList.Count];
+            
             int i = 0;
             foreach (TodoItem item in itemList)
             {
