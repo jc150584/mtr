@@ -19,11 +19,25 @@ namespace MuscleTrainingRecords00
 
             this.Model = new PlotModel { Title = "" };
 
-            var BweightLine = new LineSeries() { Title = "体重",MarkerType = MarkerType.Circle };
-            BweightLine.Color = OxyColors.Red;
-            BweightLine.MarkerType = MarkerType.Circle;
+            /* var BweightLine = new LineSeries() { Title = "体重",MarkerType = MarkerType.Circle };
+             BweightLine.Color = OxyColors.Red;
+             BweightLine.MarkerType = MarkerType.Circle;*/
 
+            var BweightLine = new LineSeries
+            {
+                StrokeThickness = 1,
 
+                MarkerType = MarkerType.Circle,
+
+                MarkerStroke = OxyColors.Blue,
+
+                MarkerFill = OxyColors.SkyBlue,
+
+                DataFieldX = "Date",
+
+                DataFieldY = "Value",
+
+            };
             foreach (DataPoint dp in BWeightList)
             {
                 BweightLine.Points.Add(dp);
@@ -40,14 +54,30 @@ namespace MuscleTrainingRecords00
 
             DataPoint[] BFattList = getBFatList();
 
-            var BFatLine = new LineSeries() { Title = "体脂肪" };
+            /*var BFatLine = new LineSeries() { Title = "体脂肪" };
             BFatLine.Color = OxyColors.Blue;
-            BFatLine.MarkerType = MarkerType.Circle;
-            
+            BFatLine.MarkerType = MarkerType.Circle;*/
+
+            var BfatLine = new LineSeries
+            {
+                StrokeThickness = 1,
+
+                MarkerType = MarkerType.Circle,
+
+                MarkerStroke = OxyColors.Red,
+
+                MarkerFill = OxyColors.SkyBlue,
+
+                DataFieldX = "Date",
+
+                DataFieldY = "Value",
+
+            };
+
             foreach (DataPoint dp in BFattList)
             {
-                BFatLine.Points.Add(dp);
-                BweightLine.MarkerType = MarkerType.Circle;
+                BfatLine.Points.Add(dp);
+               
 
             }
             /*foreach (DataPoint dp in itemList)
@@ -102,6 +132,7 @@ namespace MuscleTrainingRecords00
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
             List<TodoItem> itemList = taskItemList.Result;
             DataPoint[] points = new DataPoint[itemList.Count];
+           
             int i = 0;
             foreach (TodoItem item in itemList)
             {
