@@ -134,15 +134,16 @@ namespace MuscleTrainingRecords00
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
             List<TodoItem> itemList = taskItemList.Result;
             DataPoint[] points = new DataPoint[itemList.Count];
-           
+            
+
             int i = 0;
 
-            double s = Convert.ToDouble(DateTime.Now.ToString());//追加
+            
 
             foreach (TodoItem item in itemList)
             {
                
-                points[i++] = new DataPoint(s, item.Bweight);//追加
+                points[i++] = new DataPoint(DateTime.Now.Day, item.Bweight);//追加
 
             }
             return points;
@@ -155,10 +156,10 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            double s = Convert.ToDouble(DateTime.Now.ToString()); //追加
+           
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(s, item.Bfat);//追加
+                points[i++] = new DataPoint(DateTime.Now.Day, item.Bfat);//追加
             }
             return points;
         }
