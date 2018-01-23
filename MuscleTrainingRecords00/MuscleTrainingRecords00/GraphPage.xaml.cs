@@ -44,14 +44,14 @@ namespace MuscleTrainingRecords00
             if (sameDateItem == null) {
                 TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
                 await db.SaveItemAsync(item);
-                await DisplayAlert("", "記録されました", "OK");
+                await DisplayAlert("", "記録されました:" + item.Created, "OK");
             }
             else
             {
                 await db.DeleteItemAsync(sameDateItem);
                 TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
                 await db.SaveItemAsync(item);
-                await DisplayAlert("", "更新されました", "OK");
+                await DisplayAlert("", "更新されました:{"+sameDateItem.Created+"}→{"+item.Created+"}", "OK");
 
             }
 
