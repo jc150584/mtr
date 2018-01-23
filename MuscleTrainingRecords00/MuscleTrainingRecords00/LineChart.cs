@@ -41,9 +41,11 @@ namespace MuscleTrainingRecords00
                 DataFieldY = "Value",
 
                 LineStyle = LineStyle.Automatic,
-                
 
-               
+                MarkerSize = 6,
+
+
+
 
             };
             BweightLine.Color = OxyColors.Red;
@@ -77,6 +79,8 @@ namespace MuscleTrainingRecords00
                 DataFieldY = "Value",
 
                 LineStyle = LineStyle.Automatic,
+
+                MarkerSize = 6,
 
             };
 
