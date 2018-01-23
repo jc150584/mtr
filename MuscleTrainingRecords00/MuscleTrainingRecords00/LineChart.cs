@@ -25,7 +25,7 @@ namespace MuscleTrainingRecords00
 
 
 
-            var BweightLine = new LineSeries
+            var BweightLine = new LineSeries　//体重線
             {
                 Title = "体重",
                 StrokeThickness = 1,
@@ -36,8 +36,8 @@ namespace MuscleTrainingRecords00
 
                 MarkerFill = OxyColors.SkyBlue,
 
-                DataFieldX = "Date",
-
+                DataFieldX = DateTime.Now.ToString(),
+               // DataFieldX = "Date",
                 DataFieldY = "Value",
 
                 LineStyle = LineStyle.Automatic,
@@ -59,7 +59,7 @@ namespace MuscleTrainingRecords00
             DataPoint[] BFattList = getBFatList();
 
 
-            var BfatLine = new LineSeries
+            var BfatLine = new LineSeries    //体脂肪線
             {
                 Title = "体脂肪率",
                 StrokeThickness = 1,
@@ -70,7 +70,7 @@ namespace MuscleTrainingRecords00
 
                 MarkerFill = OxyColors.SkyBlue,
 
-                DataFieldX = "Date",
+                DataFieldX = DateTime.Now.ToString(),
 
                 DataFieldY = "Value",
 
@@ -121,7 +121,7 @@ namespace MuscleTrainingRecords00
             var maxValue = DateTimeAxis.ToDouble(endDate);
            
 
-            Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" });
+            Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
 
 
 
