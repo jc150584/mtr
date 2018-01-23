@@ -42,7 +42,7 @@ namespace MuscleTrainingRecords00
             
 
 
-            TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat /*, Created = dCreated, Bfat = B_Fat*/ };//追加
+            TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
             db.SaveItemAsync(item);
             DisplayAlert("", "記録されました", "OK");
             Application.Current.MainPage = new MainPage();
