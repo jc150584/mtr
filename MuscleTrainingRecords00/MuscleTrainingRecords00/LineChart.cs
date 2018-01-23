@@ -112,7 +112,7 @@ namespace MuscleTrainingRecords00
             };
             Model.Axes.Add(axisY);
 
-
+            /*
             var axisX = new LinearAxis() //Y軸　線
             {
                 Title = "体脂肪率(%)",
@@ -134,12 +134,12 @@ namespace MuscleTrainingRecords00
 
             };
             Model.Axes.Add(axisX);
+            */
 
 
 
-
-            /************  X軸日付
-                        var startDate = DateTime.Now.AddDays(-10);
+         
+                        var startDate = DateTime.Today.AddDays(-10);
                         var endDate = DateTime.Today;
 
                         var minValue = DateTimeAxis.ToDouble(startDate);
@@ -147,8 +147,7 @@ namespace MuscleTrainingRecords00
 
 
                         Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
-
-                *****************/
+            
 
 
 
@@ -165,19 +164,20 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            
+            double s = DateTimeAxis.ToDouble(DateTime.Today);
+
 
             foreach (TodoItem item in itemList)
             {
              
-                points[i++] = new DataPoint(item.Bfat, item.Bweight);// X軸　Y軸
+                points[i++] = new DataPoint(s, item.Bweight);// X軸　Y軸
 
             }
             return points;
         }
 
 
-       /* private static DataPoint[] getBFatList()
+       private static DataPoint[] getBFatList()
         {
             TodoItemDatabase itemDataBase = TodoItemDatabase.getDatabase();
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
@@ -185,12 +185,12 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-           
+            double s = DateTimeAxis.ToDouble(DateTime.Today);
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(DateTime.Today.Day, item.Bfat);//　　X軸　Y軸
+                points[i++] = new DataPoint(s, item.Bfat);//　　X軸　Y軸
             }
             return points;
-        }*/
+        }
     }
 }
