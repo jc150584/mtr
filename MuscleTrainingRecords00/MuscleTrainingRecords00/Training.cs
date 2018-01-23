@@ -13,6 +13,7 @@ namespace MuscleTrainingRecords00
         public string Load { get; set; }
         public string Desc { get; set; }
         public string parts { get; set; }
+        public string image { get; set; }
 
         public string getMenu()
         {
@@ -24,17 +25,17 @@ namespace MuscleTrainingRecords00
         {
             if (Menu.Equals("アブドミナルマシンクランチ（マシン）"))
             {
-                return Menu + "　　　　　　　　　                                                   " + Load;
+                return Menu + "                                            　　　　 　　　   " + Load;
             }
 
             if (Menu.Length < 27)
             {
-                return String.Format("%27s", Menu) + "                                                   " + Load;
-            }
+                return String.Format("{" + " " + ",28}", Menu) + Load; //%27s
 
+            }
             else
             {
-                return Menu + "                                                   " + Load;
+                return Menu + "                                         " + Load;
             }
         }
     }

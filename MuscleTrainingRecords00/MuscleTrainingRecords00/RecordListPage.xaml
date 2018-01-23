@@ -16,6 +16,7 @@
                      Android="0, 0, 0, 0"
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
+
             <!--
             <ListView ItemsSource="{Binding Records}"
                       IsPullToRefreshEnabled="True"
@@ -35,7 +36,6 @@
                                     <ColumnDefinition Width="1*" />
                                     <ColumnDefinition Width="1*" />
                                 </Grid.ColumnDefinitions>
-
                                 <Label Text="{Binding M_date}" 
                                    Grid.Column="0" Grid.Row="0"
                                    FontSize="Large"/>
@@ -61,17 +61,16 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
             -->
             <!--"<ListView x:Name="Records1"
                       SeparatorColor="Black"
                       ItemTapped="Records1_ItemTapped" />
            -->
-            <Label x:Name="name"/>
 
+            <Label Text=""
+                   x:Name="TName"/>
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
-            
 
         </StackLayout>
     </ContentPage.Content>
