@@ -17,10 +17,10 @@ namespace MuscleTrainingRecords00
         public bool Done { get; set; }
         public int Bweight { get; set; }
         public int Bfat { get; set; }
-        
 
-
-    
-
+        public static implicit operator Task<object>(TodoItem v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

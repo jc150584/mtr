@@ -29,7 +29,7 @@ namespace MuscleTrainingRecords00
 
         /********************ここから追加******************************************/
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        async Task Handle_ClickedAsync(object sender, System.EventArgs e)
         {
             var db = TodoItemDatabase.getDatabase();
             //String sName = eName.Text;
@@ -37,14 +37,24 @@ namespace MuscleTrainingRecords00
             //Boolean bDone = eDone.IsToggled;
             int B_Weight = int.Parse(bWeight.Text);
             int B_Fat = int.Parse(bFat.Text);
-            DateTime dCreated =  DateTime.Today; 
-            
-            
+            DateTime dCreated =  DateTime.Today;
 
 
-            TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
-            db.SaveItemAsync(item);
-            DisplayAlert("", "記録されました", "OK");
+            TodoItem sameDateItem = await db.GetItemByCreatedAsync(dCreated);
+            if (sameDateItem == null) {
+                TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
+                await db.SaveItemAsync(item);
+                await DisplayAlert("", "記録されました", "OK");
+            }
+            else
+            {
+                await db.DeleteItemAsync(sameDateItem);
+                TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat };
+                await db.SaveItemAsync(item);
+                await DisplayAlert("", "更新されました", "OK");
+
+            }
+
             Application.Current.MainPage = new MainPage();
         }
 

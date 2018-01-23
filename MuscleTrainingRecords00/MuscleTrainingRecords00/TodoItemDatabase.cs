@@ -40,6 +40,11 @@ namespace MuscleTrainingRecords00
             return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
+        public Task<TodoItem> GetItemByCreatedAsync(System.DateTime dt)
+        {
+            return database.Table<TodoItem>().Where(i => i.Created == dt).FirstOrDefaultAsync();
+        }
+
         public Task<int> SaveItemAsync(TodoItem item)
         {
             if (item.ID != 0)
