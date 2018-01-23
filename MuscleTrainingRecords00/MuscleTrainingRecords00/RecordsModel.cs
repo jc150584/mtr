@@ -34,7 +34,7 @@ namespace MuscleTrainingRecords00
             {
                 try
                 {
-                    //データベースにFoodテーブルを作成する
+                    //データベースにテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
                     db.Insert(new RecordsModel() { M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date });
@@ -79,7 +79,7 @@ namespace MuscleTrainingRecords00
             {
                 try
                 {
-                    //データベースにFoodテーブルを作成する
+                    //データベースにテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
                     db.Delete<RecordsModel>(m_no);//デリートで渡す値は主キーじゃないといけない説
@@ -102,7 +102,7 @@ namespace MuscleTrainingRecords00
             {
                 try
                 {
-                    //データベースにFoodテーブルを作成する
+                    //データベースにテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
                     db.DeleteAll<RecordsModel>();//デリートで渡す値は主キーじゃないといけない説
@@ -124,7 +124,7 @@ namespace MuscleTrainingRecords00
             {
                 try
                 {
-                    //データベースにFoodテーブルを作成する
+                    //データベースにテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
                     //TimeSpan t = f_date - new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day+1);//よくわからん

@@ -141,8 +141,8 @@ namespace MuscleTrainingRecords00
 
 
          
-                        var startDate = DateTime.Today.AddDays(-10);
-                        var endDate = DateTime.Today;
+                        var startDate = DateTime.Today;
+                        var endDate = DateTime.Today.AddDays(+7);
 
                         var minValue = DateTimeAxis.ToDouble(startDate);
                         var maxValue = DateTimeAxis.ToDouble(endDate);
@@ -172,6 +172,7 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
                 double Today = DateTimeAxis.ToDouble(item.Created);
+
                 points[i++] = new DataPoint(Today, item.Bweight);// X軸　Y軸
 
             }
@@ -191,6 +192,7 @@ namespace MuscleTrainingRecords00
             foreach ( TodoItem item in itemList)
             {
                 double Today = DateTimeAxis.ToDouble(item.Created);
+
                 points[i++] = new DataPoint(Today, item.Bfat);//　　X軸　Y軸
             }
             return points;
