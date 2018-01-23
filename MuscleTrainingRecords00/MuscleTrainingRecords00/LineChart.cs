@@ -175,7 +175,7 @@ namespace MuscleTrainingRecords00
 
             foreach (TodoItem item in itemList)
             {
-                double Today = DateTimeAxis.ToDouble(item.Created.AddDays(+2));
+                double Today = DateTimeAxis.ToDouble(item.Created);
 
                 points[i++] = new DataPoint(Today, item.Bweight);// X軸　Y軸
 
@@ -195,7 +195,7 @@ namespace MuscleTrainingRecords00
             
             foreach ( TodoItem item in itemList)
             {
-                double Today = DateTimeAxis.ToDouble(item.Created.AddDays(+2));
+                double Today = DateTimeAxis.ToDouble(item.Created);
 
                 points[i++] = new DataPoint(Today, item.Bfat);//　　X軸　Y軸
             }
