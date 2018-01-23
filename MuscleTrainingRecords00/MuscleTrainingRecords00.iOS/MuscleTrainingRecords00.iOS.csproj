@@ -194,6 +194,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\graph %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\O5m9qkPu.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

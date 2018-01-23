@@ -98,7 +98,7 @@
 
                 <Label x:Name="RM"
                        Text="　　   "
-                       WidthRequest="200"
+                       WidthRequest="300"
                        FontSize="100"
                        TextColor="Orange"
                        />
