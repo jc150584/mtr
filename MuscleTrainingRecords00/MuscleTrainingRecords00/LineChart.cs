@@ -113,7 +113,7 @@ namespace MuscleTrainingRecords00
             Model.Axes.Add(axisY);
 
             
-
+/************
             var startDate = DateTime.Now.AddDays(-10);
             var endDate = DateTime.Today;
 
@@ -123,7 +123,7 @@ namespace MuscleTrainingRecords00
 
             Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
 
-
+    *****************/
 
 
 
@@ -145,7 +145,7 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
              
-                points[i++] = new DataPoint(DateTime.Today.Ticks, item.Bweight);// X軸　Y軸
+                points[i++] = new DataPoint(item.ID, item.Bweight);// X軸　Y軸
 
             }
             return points;
@@ -161,7 +161,7 @@ namespace MuscleTrainingRecords00
            
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(DateTime.Today.Ticks, item.Bfat);//　　X軸　Y軸
+                points[i++] = new DataPoint(item.ID, item.Bfat);//　　X軸　Y軸
             }
             return points;
         }
