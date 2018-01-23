@@ -145,7 +145,7 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
              
-                points[i++] = new DataPoint(double.Parse(item.Created.ToString()), item.Bweight);//追加 X軸　Y軸
+                points[i++] = new DataPoint(item.ID, item.Bweight);//追加 X軸　Y軸
 
             }
             return points;
@@ -161,7 +161,7 @@ namespace MuscleTrainingRecords00
             //double date = double.Parse(DateTime.Now.ToString());
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(double.Parse(item.Created.ToString()), item.Bfat);//追加　　X軸　Y軸
+                points[i++] = new DataPoint(item.ID, item.Bfat);//追加　　X軸　Y軸
             }
             return points;
         }
