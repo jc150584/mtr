@@ -112,18 +112,43 @@ namespace MuscleTrainingRecords00
             };
             Model.Axes.Add(axisY);
 
-            
-/************
-            var startDate = DateTime.Now.AddDays(-10);
-            var endDate = DateTime.Today;
 
-            var minValue = DateTimeAxis.ToDouble(startDate);
-            var maxValue = DateTimeAxis.ToDouble(endDate);
-           
+            var axisX = new LinearAxis() //Y軸　線
+            {
+                Title = "体脂肪率(%)",
+                IsZoomEnabled = false,
+                Position = AxisPosition.Left,
+                Maximum = 40,
+                Minimum = 20,
+                MajorStep = 1,
+                MajorGridlineStyle = LineStyle.Solid,
+                MinorGridlineStyle = LineStyle.Dot,
+                ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
+                ExtraGridlineThickness = 3,
+                ExtraGridlineColor = OxyColors.SkyBlue,
 
-            Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
 
-    *****************/
+
+
+
+
+            };
+            Model.Axes.Add(axisX);
+
+
+
+
+            /************  X軸日付
+                        var startDate = DateTime.Now.AddDays(-10);
+                        var endDate = DateTime.Today;
+
+                        var minValue = DateTimeAxis.ToDouble(startDate);
+                        var maxValue = DateTimeAxis.ToDouble(endDate);
+
+
+                        Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
+
+                *****************/
 
 
 
@@ -145,12 +170,14 @@ namespace MuscleTrainingRecords00
             foreach (TodoItem item in itemList)
             {
              
-                points[i++] = new DataPoint(item.ID, item.Bweight);// X軸　Y軸
+                points[i++] = new DataPoint(item.Bfat, item.Bweight);// X軸　Y軸
 
             }
             return points;
         }
-        private static DataPoint[] getBFatList()
+
+
+       /* private static DataPoint[] getBFatList()
         {
             TodoItemDatabase itemDataBase = TodoItemDatabase.getDatabase();
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
@@ -161,9 +188,9 @@ namespace MuscleTrainingRecords00
            
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(item.ID, item.Bfat);//　　X軸　Y軸
+                points[i++] = new DataPoint(DateTime.Today.Day, item.Bfat);//　　X軸　Y軸
             }
             return points;
-        }
+        }*/
     }
 }
