@@ -176,6 +176,21 @@
       <Name>MuscleTrainingRecords00</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dumbbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\weightlifting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\contract %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\graph.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:MuscleTrainingRecords00"
              x:Class="MuscleTrainingRecords00.MainPage">
 
-    <NavigationPage Title="記録" Icon="contract.png">　
+    <NavigationPage Title="記録" Icon="contract (2).png">　
         <!--下タブのタイトル-->
 
         <x:Arguments>
@@ -12,13 +12,13 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="トレーニング履歴" Icon="notebook.png">
+    <!--<NavigationPage Title="トレーニング履歴" Icon="notebook.png">
         <x:Arguments>
             <local:TrainingLogPage />
         </x:Arguments>
-    </NavigationPage>
+    </NavigationPage>-->
 
-    <NavigationPage Title="メニュー一覧" Icon="dumbbell-variant-outline.png">
+    <NavigationPage Title="メニュー一覧" Icon="weightlifting.png">
         <x:Arguments>
             <local:MenuPage />
         </x:Arguments>

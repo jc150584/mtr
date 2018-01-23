@@ -36,7 +36,7 @@
 
 
             <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="Center">
+                         HorizontalOptions="StartAndExpand">
                 <Label Text="重量(kg)" 
                        FontSize="Large"/>
                 <Entry x:Name="Weight" Placeholder="重量を入力してください"
@@ -46,7 +46,7 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="Center">
+                         HorizontalOptions="Start">
 
                 <Label Text="回数   "
                        FontSize="Large"
