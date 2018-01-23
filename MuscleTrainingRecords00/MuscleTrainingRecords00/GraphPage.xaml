@@ -83,14 +83,17 @@
                 <Label Text="日付" 
                        FontSize="Medium"/>
 
-                <DatePicker 
+                <Label Text="{Binding CreationDate, StringFormat='{yyyy/MM/dd}'}" Font="15,Bold" />
+
+                <!--<DatePicker
                             x:Name="eCreated" 
                             Format = "yyyy/MM/dd"
                             WidthRequest="250"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             Margin="30"
-                            />
+                            />-->
+                
 
             </StackLayout>
 

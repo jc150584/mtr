@@ -17,8 +17,15 @@ namespace MuscleTrainingRecords00
         public GraphPage()
         {
             InitializeComponent();
+            
         }
-        DateTime yyyymmdd;//追加
+        //DateTime yyyymmdd;//追加
+
+            
+
+        
+            
+        
 
         /********************ここから追加******************************************/
 
@@ -31,6 +38,7 @@ namespace MuscleTrainingRecords00
             int B_Weight = int.Parse(bWeight.Text);
             int B_Fat = int.Parse(bFat.Text);
             DateTime dCreated =  DateTime.Now; //変更 eCreated.Date
+            
 
 
             TodoItem item = new TodoItem() { Created = dCreated, Bweight = B_Weight, Bfat = B_Fat /*, Created = dCreated, Bfat = B_Fat*/ };//追加
@@ -39,11 +47,11 @@ namespace MuscleTrainingRecords00
             Application.Current.MainPage = new MainPage();
         }
 
-        private void eCreated_DateSelected(object sender, DateChangedEventArgs e)//追加
+        /*private void eCreated_DateSelected(object sender, DateChangedEventArgs e)//追加
         {
             yyyymmdd = new DateTime(eCreated.Date.Year, eCreated.Date.Month, eCreated.Date.Day);
 
 
-        }
+        }*/
     }
 }

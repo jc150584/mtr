@@ -166,13 +166,13 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            double s = DateTimeAxis.ToDouble(DateTime.Today.AddDays(+1));
+            double Today = DateTimeAxis.ToDouble(DateTime.Today.AddDays(+1));
 
 
             foreach (TodoItem item in itemList)
             {
              
-                points[i++] = new DataPoint(s, item.Bweight);// X軸　Y軸
+                points[i++] = new DataPoint(Today, item.Bweight);// X軸　Y軸
 
             }
             return points;
@@ -187,10 +187,10 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            double s = DateTimeAxis.ToDouble(DateTime.Today.AddDays(+1));
+            double Today = DateTimeAxis.ToDouble(DateTime.Today.AddDays(+1));
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(s, item.Bfat);//　　X軸　Y軸
+                points[i++] = new DataPoint(Today, item.Bfat);//　　X軸　Y軸
             }
             return points;
         }
