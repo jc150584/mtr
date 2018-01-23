@@ -58,6 +58,8 @@ namespace MuscleTrainingRecords00
 
             DataPoint[] BFattList = getBFatList();
 
+           
+
 
             var BfatLine = new LineSeries    //体脂肪線
             {
@@ -164,7 +166,7 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            double s = DateTimeAxis.ToDouble(DateTime.Today);
+            double s = DateTimeAxis.ToDouble(DateTime.Today.AddDays(+1));
 
 
             foreach (TodoItem item in itemList)
@@ -185,7 +187,7 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            double s = DateTimeAxis.ToDouble(DateTime.Today);
+            double s = DateTimeAxis.ToDouble(DateTime.Today.AddDays(+1));
             foreach ( TodoItem item in itemList)
             {
                 points[i++] = new DataPoint(s, item.Bfat);//　　X軸　Y軸
