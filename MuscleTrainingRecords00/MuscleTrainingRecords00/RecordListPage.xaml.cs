@@ -18,6 +18,8 @@ namespace MuscleTrainingRecords00
             InitializeComponent();
             TName.Text = "";
 
+            var image = new Image { Source = "O5m9qkPu.jpeg" };
+
         }
         public RecordListPage(String t)
         {

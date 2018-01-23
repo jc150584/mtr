@@ -127,9 +127,9 @@
                        VerticalOptions="Center"
                        Margin="30"/>
 
-               
 
-                <Button  Clicked="Handle_Clicked" Text="保存" x:Name="addItemButton" BackgroundColor="LightCoral" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
+
+                <Button  Clicked="Handle_Clicked" Text="保存" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
 
             </StackLayout>
 
