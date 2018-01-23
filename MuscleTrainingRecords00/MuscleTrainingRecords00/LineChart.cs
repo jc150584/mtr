@@ -90,7 +90,7 @@ namespace MuscleTrainingRecords00
             Model.Series.Add(BfatLine);
 
 
-            var axisY = new LinearAxis() //縦
+            var axisY = new LinearAxis() //Y軸　線
             {
                 Title = "体重(kg)　体脂肪率(%)",
                 IsZoomEnabled = false,
@@ -115,7 +115,7 @@ namespace MuscleTrainingRecords00
             
 
             var startDate = DateTime.Now.AddDays(-10);
-            var endDate = DateTime.Now;
+            var endDate = DateTime.Today;
 
             var minValue = DateTimeAxis.ToDouble(startDate);
             var maxValue = DateTimeAxis.ToDouble(endDate);
@@ -140,12 +140,12 @@ namespace MuscleTrainingRecords00
 
             int i = 0;
 
-            //double date = double.Parse(DateTime.Now.ToString());
+            
 
             foreach (TodoItem item in itemList)
             {
              
-                points[i++] = new DataPoint(item.ID, item.Bweight);//追加 X軸　Y軸
+                points[i++] = new DataPoint(DateTime.Today.Ticks, item.Bweight);// X軸　Y軸
 
             }
             return points;
@@ -158,10 +158,10 @@ namespace MuscleTrainingRecords00
             DataPoint[] points = new DataPoint[itemList.Count];
             
             int i = 0;
-            //double date = double.Parse(DateTime.Now.ToString());
+           
             foreach ( TodoItem item in itemList)
             {
-                points[i++] = new DataPoint(item.ID, item.Bfat);//追加　　X軸　Y軸
+                points[i++] = new DataPoint(DateTime.Today.Ticks, item.Bfat);//　　X軸　Y軸
             }
             return points;
         }
