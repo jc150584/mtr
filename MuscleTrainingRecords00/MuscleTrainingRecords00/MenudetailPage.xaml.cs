@@ -13,7 +13,7 @@ namespace MuscleTrainingRecords00
     public partial class MenudetaliPage : ContentPage
     {
         string t;
-        public MenudetaliPage(String m, String d, String i)//String m
+        public MenudetaliPage(string m, string d, string i)//String m
         {
             InitializeComponent();
 

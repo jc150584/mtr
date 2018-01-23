@@ -18,7 +18,7 @@
             </StackLayout.Margin>
 
 
-            <Image Source="O5m9qkPu.jpeg" />
+           
             
             <Label Text=""
                    x:Name="TName"/>

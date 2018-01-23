@@ -212,9 +212,9 @@ namespace MuscleTrainingRecords00
             // DisplayAlert("", , "OK");
 
             Training training = (Training)listView.SelectedItem;
-            String m = training.Menu;
-            String d = training.Desc;
-            String i = training.image;
+            string m = training.Menu;
+            string d = training.Desc;
+            string i = training.image;
 
             //Navigation.PushAsync(new MenudetaliPage(l));
 
