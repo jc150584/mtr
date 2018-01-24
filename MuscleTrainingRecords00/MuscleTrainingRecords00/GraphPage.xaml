@@ -82,11 +82,21 @@
 
                 <Label Text="日付" 
                        FontSize="Medium"/>
+                <StackLayout  Orientation="Horizontal">
 
-                <Label Text="   "
+                    <Label Text="   "
                        FontSize="Large"
-                       x:Name="today"
-                       FormattedText = "yyyy/MM/dd"/>
+                       x:Name="Year"
+                      />
+                    <Label Text="   "
+                       FontSize="Large"
+                       x:Name="Month"
+                      />
+                    <Label Text="   "
+                       FontSize="Large"
+                       x:Name="Day"
+                      />
+                </StackLayout>
 
                 <!--<Label Text="{Binding CreationDate, StringFormat='{yyyy/MM/dd}'}" Font="15,Bold" />-->
 
