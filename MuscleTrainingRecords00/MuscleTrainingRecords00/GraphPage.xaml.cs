@@ -17,8 +17,9 @@ namespace MuscleTrainingRecords00
         public GraphPage()
         {
             InitializeComponent();
-
-            today.Text = DateTime.Today.ToString(DateTime.Today.Year.ToString(),DateTime.Today.Month.ToString(), DateTime.Today.Day.ToString());
+            DateTime yyyymmdd;
+            yyyymmdd = (DateTime.Today.Year.ToString(),DateTime.Today.Month.ToString(), DateTime.Today.Day.ToString());
+            today.Text = yyyymmdd.ToString();
             
         }
         //DateTime yyyymmdd;//追加
