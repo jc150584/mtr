@@ -18,7 +18,7 @@ namespace MuscleTrainingRecords00
         {
             InitializeComponent();
 
-            today.Text = DateTime.Today.ToString(DateTime.Today.Year,DateTime.Today.Month,DateTime.Today.Day);
+            today.Text = DateTime.Today.ToString(DateTime.Today.Year.ToString(),DateTime.Today.Month.ToString(), DateTime.Today.Day.ToString());
             
         }
         //DateTime yyyymmdd;//追加
