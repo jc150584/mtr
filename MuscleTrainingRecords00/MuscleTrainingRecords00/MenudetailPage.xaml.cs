@@ -29,7 +29,7 @@ namespace MuscleTrainingRecords00
 
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
-            RecordsModel.InsertRe(n);
+            RecordsModel.InsertRe(t);
             Navigation.PushAsync(new RecordListPage());
 
         }
