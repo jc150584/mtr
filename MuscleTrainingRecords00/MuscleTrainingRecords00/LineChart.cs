@@ -153,7 +153,7 @@ namespace MuscleTrainingRecords00
                         var maxValue = DateTimeAxis.ToDouble(endDate);
 
 
-                        Model.Axes.Add(new DateTimeAxis { Title ="日付", Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
+                        Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
             
 
 
