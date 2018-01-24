@@ -36,11 +36,16 @@ namespace MuscleTrainingRecords00
             try
             {
 
-                if (bWeight.Text == null || bFat.Text == null)
+                if (bWeight.Text == null)
                 {
-                    DisplayAlert("", "数値を入力してください", "OK");
+                    DisplayAlert("", "体重を入力してください", "OK");
 
                 }
+                else if (bFat.Text == null)
+                {
+                    DisplayAlert("", "体脂肪率を入力してください", "OK");
+                }
+                    
 
                 var db = TodoItemDatabase.getDatabase();
                 //String sName = eName.Text;

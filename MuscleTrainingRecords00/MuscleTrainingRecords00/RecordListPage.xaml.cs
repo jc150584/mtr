@@ -13,29 +13,21 @@ namespace MuscleTrainingRecords00
     public partial class RecordListPage : ContentPage
     {
         private string test;
+
         public RecordListPage()
         {
             InitializeComponent();
-            TName.Text = "";
+
+            list.ItemsSource = RecordsModel.SelectRe().ToString();
 
           
-
-        }
-        public RecordListPage(String t)
-        {
-            InitializeComponent();
-
-            //DisplayAlert("test", i, "OK");
-            //test = i;
-
-            //Records1.ItemsSource = test;
-
-            TName.Text = t;
+           
         }
 
         private void RecordListButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MenuPage());
+            
         }
 
         /*private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)

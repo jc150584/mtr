@@ -19,9 +19,8 @@
 
 
            
-            
-            <Label Text=""
-                   x:Name="TName"/>
+            <!--追加-->
+            <ListView x:Name="list"/>
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
 

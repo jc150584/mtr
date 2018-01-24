@@ -22,15 +22,15 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
-            image.Source = i;
+            //image.Source = i;
 
             t = m;
         }
 
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
-
-            Navigation.PushAsync(new RecordListPage(t));
+            RecordsModel.InsertRe(n);
+            Navigation.PushAsync(new RecordListPage());
 
         }
 
