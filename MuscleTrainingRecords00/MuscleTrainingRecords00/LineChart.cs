@@ -99,7 +99,7 @@ namespace MuscleTrainingRecords00
             var axisY = new LinearAxis() //Y軸　線
             {
                 Title = "体重(kg)　体脂肪率(%)",
-                title
+                
                 IsZoomEnabled = false,
                 Position = AxisPosition.Left,
                 Maximum = 150,
