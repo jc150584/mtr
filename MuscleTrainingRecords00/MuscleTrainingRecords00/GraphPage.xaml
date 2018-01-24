@@ -85,7 +85,8 @@
 
                 <Label Text="   "
                        FontSize="Large"
-                       x:Name="today"/>
+                       x:Name="today"
+                       FormattedText = "yyyy/MM/dd"/>
 
                 <!--<Label Text="{Binding CreationDate, StringFormat='{yyyy/MM/dd}'}" Font="15,Bold" />-->
 
