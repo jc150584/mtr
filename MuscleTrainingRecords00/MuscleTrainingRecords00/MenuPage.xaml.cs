@@ -38,7 +38,7 @@ namespace MuscleTrainingRecords00
         {
             Training pushup = new Training() { Menu = "アブドミナルマシンクランチ（マシン）", Load = "負荷度:☆☆", parts = "腹", Desc = "両脚は肩幅程度に開き、マシンのステップに足を乗せます。おへそを覗き込むように上体を丸めていく。（１０回ギリギリできるくらいのウェイトにセットして行いましょう", image = "MuscleTrainingRecords00.iOS.Recources.O5m9qkPu.jpeg" };
             await itemDataBase.InsertItemAsync(pushup);
-     
+
             await itemDataBase.InsertItemAsync(new Training() { Menu = "ウェィテッドクランチ（プレート）　　　　　　　　　　　", Load = "負荷度:☆☆", parts = "腹", Desc = "プレートを頭の後ろに抱え、膝を曲げ首から上がベンチから出るように仰向けに寝ます。腹筋を意識しながら状態を丸めます。腹筋の緊張を解かないままゆっくり上体がつくまでおろす", image = "dumbbell_man.png" });
             await itemDataBase.InsertItemAsync(new Training() { Menu = "サイドクランチ　　　　　　　　　　　　　　　　　　　　", Load = "負荷度:☆☆", parts = "腹", Desc = "腰を起点に下半身を横に倒す。この体勢のまま、お腹を覗き込むようにして上背部を浮かす。片側が終わったら、倒す向きを逆にして同様に行う。", image = "dumbbell_man.png" });
             await itemDataBase.InsertItemAsync(new Training() { Menu = "サイドバイク（ダンベル）　　　　　　　　　　　　　　　", Load = "負荷度:☆", parts = "腹", Desc = "ダンベルを片手に持ち、反対の手を頭の横に沿え・ダンベルの方向に体を預けて構える。ダンベルと反対側に体を傾けてもとに戻す", image = "dumbbell_man.png" });
@@ -118,7 +118,22 @@ namespace MuscleTrainingRecords00
 
         }
 
-        
+        //SearchBarを押した時のイベントハンドラ
+        private void Select_SearchButtonPressed(object sender, EventArgs e)
+        {
+            /*TrainingDatabase itemDataBase = TrainingDatabase.getDatabase();
+            List<Training> itemList = await itemDataBase.GetItemsAsyncByParts(Select.Text);
+            listView.ItemsSource = itemList;*/
+
+            /*if (0<=Select.Text.IndexOf(array1))
+            {   
+            }
+            else
+            {
+                this.listView.ItemsSource = "データがありません";
+            }*/
+
+        }
 
         private async void 全部_Clicked(object sender, EventArgs e)
         {
@@ -167,7 +182,7 @@ namespace MuscleTrainingRecords00
             listView.ItemsSource = itemList;
         }
 
-        /*private void Sort_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void Sort_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
             //int s = Sort.SelectedIndex;
@@ -189,7 +204,7 @@ namespace MuscleTrainingRecords00
                 // ListViewを生成する
                 listView.ItemsSource = array1;
             }
-        }*/
+        }
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
