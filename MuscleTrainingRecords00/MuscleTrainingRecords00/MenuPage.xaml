@@ -5,18 +5,18 @@
              Title="メニュー一覧">
     <ContentPage.Content>
 
+        <StackLayout Orientation="Vertical"
+                     Spacing="20">
 
-        <StackLayout.Margin>
 
             <!-- iOSはトップに 20 の余白が必要 -->
             <OnPlatform x:TypeArguments="Thickness"
                     iOS="0, 20, 0, 0"
                      Android="0, 0, 0, 0"
                      WinPhone="0, 0, 0, 0" />
-        </StackLayout.Margin>
         
-        <StackLayout Orientation="Vertical"
-                     Spacing="20">
+        
+       
 
          
 
