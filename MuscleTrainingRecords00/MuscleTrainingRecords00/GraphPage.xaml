@@ -86,6 +86,11 @@
 
                     <Label Text="   "
                        FontSize="Large"
+                       x:Name="today"
+                      />
+                    
+                    <Label Text="   "
+                       FontSize="Large"
                        x:Name="Year"
                       />
                     <Label Text="   "

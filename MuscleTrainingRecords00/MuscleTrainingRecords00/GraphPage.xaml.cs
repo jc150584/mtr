@@ -20,12 +20,15 @@ namespace MuscleTrainingRecords00
             /* String yyyymmdd;
              yyyymmdd = DateTime.Today.ToString(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day);
              today.Text = yyyymmdd.ToString();
-            today.Text = DateTime.Today.ToString()*/
+            today.Text = DateTime.Today.ToString()
 
             Year.Text = DateTime.Today.Year.ToString();
             Month.Text = DateTime.Today.Month.ToString();
-            Day.Text = DateTime.Today.Day.ToString();
-           
+            Day.Text = DateTime.Today.Day.ToString();*/
+
+            today.Text = DateTime.Today.ToString();
+
+
 
         }
        
