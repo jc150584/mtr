@@ -26,7 +26,7 @@ namespace MuscleTrainingRecords00
             Month.Text = DateTime.Today.Month.ToString();
             Day.Text = DateTime.Today.Day.ToString();*/
 
-            today.Text = DateTime.Today.ToString();
+           // today.Text = DateTime.Today.ToString();
 
 
 
