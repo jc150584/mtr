@@ -38,7 +38,7 @@ namespace MuscleTrainingRecords00
 
                 if (bWeight.Text == null || bFat.Text == null)
                 {
-                    DisplayAlert("", "数値を入力してください", "OK");
+                   await DisplayAlert("", "数値を入力してください", "OK");
 
                 }
 
@@ -71,7 +71,7 @@ namespace MuscleTrainingRecords00
             }
             catch (Exception)
             {
-                DisplayAlert("", "数値を入力してください", "OK");
+               await DisplayAlert("", "数値を入力してください", "OK");
             }
 
             /*private void eCreated_DateSelected(object sender, DateChangedEventArgs e)//追加
