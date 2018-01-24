@@ -1,4 +1,4 @@
-﻿ using OxyPlot;
+﻿using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using Xamarin.Forms;
@@ -17,7 +17,7 @@ namespace MuscleTrainingRecords00
 
         public LineChart()
         {
-            
+
             DataPoint[] BWeightList = getItemList();
 
             this.Model = new PlotModel { Title = "" };
@@ -37,7 +37,7 @@ namespace MuscleTrainingRecords00
                 MarkerFill = OxyColors.SkyBlue,
 
                 DataFieldX = DateTime.Now.ToString(),
-               // DataFieldX = "Date",
+                // DataFieldX = "Date",
                 DataFieldY = "Value",
 
                 LineStyle = LineStyle.Automatic,
@@ -55,12 +55,12 @@ namespace MuscleTrainingRecords00
                 BweightLine.Points.Add(dp);
                 BweightLine.MarkerType = MarkerType.Circle;
             }
-       
+
             Model.Series.Add(BweightLine);
 
             DataPoint[] BFattList = getBFatList();
 
-           
+
 
 
             var BfatLine = new LineSeries    //体脂肪線
@@ -68,7 +68,7 @@ namespace MuscleTrainingRecords00
                 Title = "体脂肪率",
                 StrokeThickness = 1,
 
-                MarkerType = MarkerType.Circle, 
+                MarkerType = MarkerType.Circle,
 
                 MarkerStroke = OxyColors.GreenYellow,
 
@@ -89,17 +89,16 @@ namespace MuscleTrainingRecords00
             foreach (DataPoint dp in BFattList)
             {
                 BfatLine.Points.Add(dp);
-               
+
 
             }
-           
+
             Model.Series.Add(BfatLine);
 
 
             var axisY = new LinearAxis() //Y軸　線
             {
                 Title = "体重(kg)　体脂肪率(%)",
-                
                 IsZoomEnabled = false,
                 Position = AxisPosition.Left,
                 Maximum = 150,
@@ -110,9 +109,9 @@ namespace MuscleTrainingRecords00
                 ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
                 ExtraGridlineThickness = 3,
                 ExtraGridlineColor = OxyColors.SkyBlue,
-                
-                
-                
+
+
+
 
 
 
@@ -133,28 +132,22 @@ namespace MuscleTrainingRecords00
                 ExtraGridlines = new double[] { 1, 2, 3, 8, 9, 10 },
                 ExtraGridlineThickness = 3,
                 ExtraGridlineColor = OxyColors.SkyBlue,
-
-
-
-
-
-
             };
             Model.Axes.Add(axisX);
             */
 
 
 
-         
-                        var startDate = DateTime.Today;
-                        var endDate = DateTime.Today.AddDays(+7);
 
-                        var minValue = DateTimeAxis.ToDouble(startDate);
-                        var maxValue = DateTimeAxis.ToDouble(endDate);
+            var startDate = DateTime.Today;
+            var endDate = DateTime.Today.AddDays(+7);
+
+            var minValue = DateTimeAxis.ToDouble(startDate);
+            var maxValue = DateTimeAxis.ToDouble(endDate);
 
 
-                        Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
-            
+            Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
+
 
 
 
@@ -167,7 +160,7 @@ namespace MuscleTrainingRecords00
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
             List<TodoItem> itemList = taskItemList.Result;
             DataPoint[] points = new DataPoint[itemList.Count];
-            
+
 
             int i = 0;
 
@@ -185,16 +178,16 @@ namespace MuscleTrainingRecords00
         }
 
 
-       private static DataPoint[] getBFatList()
+        private static DataPoint[] getBFatList()
         {
             TodoItemDatabase itemDataBase = TodoItemDatabase.getDatabase();
             Task<List<TodoItem>> taskItemList = itemDataBase.GetItemsAsync();
             List<TodoItem> itemList = taskItemList.Result;
             DataPoint[] points = new DataPoint[itemList.Count];
-            
+
             int i = 0;
-            
-            foreach ( TodoItem item in itemList)
+
+            foreach (TodoItem item in itemList)
             {
                 double Today = DateTimeAxis.ToDouble(item.Created);
 
