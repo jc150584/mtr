@@ -99,6 +99,7 @@ namespace MuscleTrainingRecords00
             var axisY = new LinearAxis() //Y軸　線
             {
                 Title = "体重(kg)　体脂肪率(%)",
+                title
                 IsZoomEnabled = false,
                 Position = AxisPosition.Left,
                 Maximum = 150,
@@ -152,7 +153,7 @@ namespace MuscleTrainingRecords00
                         var maxValue = DateTimeAxis.ToDouble(endDate);
 
 
-                        Model.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
+                        Model.Axes.Add(new DateTimeAxis { Title ="日付", Position = AxisPosition.Bottom, Minimum = minValue, Maximum = maxValue, StringFormat = "M/d" }); //X軸日付
             
 
 
