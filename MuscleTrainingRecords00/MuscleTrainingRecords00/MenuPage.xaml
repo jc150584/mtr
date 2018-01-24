@@ -5,22 +5,20 @@
              Title="メニュー一覧">
     <ContentPage.Content>
 
+
+        <StackLayout.Margin>
+
+            <!-- iOSはトップに 20 の余白が必要 -->
+            <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                     Android="0, 0, 0, 0"
+                     WinPhone="0, 0, 0, 0" />
+        </StackLayout.Margin>
+        
         <StackLayout Orientation="Vertical"
                      Spacing="20">
 
-            <Label Text=""/>
-
-            <Picker x:Name="Sort" Title="並び替え"
-                    SelectedIndexChanged="Sort_SelectedIndexChanged_1">
-                <Picker.Items>
-                    <x:String>五十音順</x:String>
-                    <x:String>負荷度</x:String>
-                </Picker.Items>
-            </Picker>
-
-            <SearchBar x:Name="Select" 
-                           Placeholder = "入力してください"
-                           SearchButtonPressed="Select_SearchButtonPressed"/>
+         
 
 
             <StackLayout Orientation="Horizontal">
