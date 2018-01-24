@@ -18,6 +18,8 @@ namespace MuscleTrainingRecords00
         {
             InitializeComponent();
 
+            string s = DateTime.Today;
+            today = s;
         }
         //DateTime yyyymmdd;//追加
 
