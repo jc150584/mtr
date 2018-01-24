@@ -72,7 +72,7 @@
 
 
 
-                
+
 
             </StackLayout>
 
@@ -82,15 +82,11 @@
 
                 <Label Text="日付" 
                        FontSize="Medium"/>
-               
 
-                    <Label Text="   "
+                <Label Text="   "
                        FontSize="Large"
                        x:Name="today"
-                      />
-
-                    
-                </StackLayout>
+                       FormattedText = "yyyy/MM/dd"/>
 
                 <!--<Label Text="{Binding CreationDate, StringFormat='{yyyy/MM/dd}'}" Font="15,Bold" />-->
 
@@ -143,6 +139,6 @@
             </StackLayout>
 
 
-       
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
