@@ -24,7 +24,7 @@ namespace MuscleTrainingRecords00
 
             }catch(Exception e)
             {
-                N.Text = "";
+                list.ItemsSource = "";
             }
 
           

@@ -17,7 +17,6 @@
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
             
-            <Label x:Name="N"/>
            
             <!--追加-->
             <ListView x:Name="list"/>
