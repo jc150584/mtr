@@ -14,6 +14,8 @@ namespace MuscleTrainingRecords00
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int M_no { get; set; } //筋トレNo 主キー
 
+        public string M_name { get; set; } //筋トレ名前
+
         public int M_weight { get; set; } //重量
 
         public int M_leg { get; set; } //回数
@@ -22,8 +24,7 @@ namespace MuscleTrainingRecords00
 
         public DateTime M_date { get; set; } //日付
 
-        //追加
-        public string M_name { get; set; } //筋トレ名前
+        
 
 
         //[ForeignKey(typeof(SettingModel))]
@@ -52,7 +53,7 @@ namespace MuscleTrainingRecords00
         }
 
         /********************インサートメソッド RecordListPage　追加**********************/
-        public static void InsertRe(string m_name)
+        public static void InsertRe(int m_no, string m_name, int m_weight, int m_leg, int m_set, DateTime m_date)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -62,7 +63,7 @@ namespace MuscleTrainingRecords00
                     //データベースにFoodテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
-                    db.Insert(new RecordsModel() { M_name = m_name });
+                    db.Insert(new RecordsModel() { M_no = m_no, M_name = m_name, M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date});
                     db.Commit();
                 }
                 catch (Exception e)

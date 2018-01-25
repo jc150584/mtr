@@ -17,9 +17,48 @@
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
             
-           
-            <!--追加-->
-            <ListView x:Name="list"/>
+              <ContentPage.BindingContext>
+                  <local:ReModel />
+              </ContentPage.BindingContext>
+            
+            <ListView ItemsSource="{Binding Records}"
+                      x:Name="list">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,20,10,20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding M_name}" 
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontAttributes="Bold"/>
+                                <Grid Grid.Column="1" Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding M_date}" 
+                                       Grid.Column="0" Grid.Row="0"
+                                       HorizontalOptions="End"
+                                       FontAttributes="Bold"/>
+                                </Grid>
+                            </Grid>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
             <Button   Clicked="RecordListButton" Text="メニュー追加" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
 

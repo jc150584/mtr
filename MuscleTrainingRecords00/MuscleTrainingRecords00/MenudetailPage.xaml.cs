@@ -13,6 +13,10 @@ namespace MuscleTrainingRecords00
     public partial class MenudetaliPage : ContentPage
     {
         string t;
+
+        //今日の日付
+        DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
         public MenudetaliPage(string m, string d, string i)//String m
         {
             InitializeComponent();
@@ -29,7 +33,7 @@ namespace MuscleTrainingRecords00
 
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
-            RecordsModel.InsertRe(t);
+            RecordsModel.InsertRe(1,t,0,0,0,now);
             Navigation.PushAsync(new RecordListPage());
 
         }

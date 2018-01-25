@@ -17,16 +17,6 @@ namespace MuscleTrainingRecords00
         public RecordListPage()
         {
             InitializeComponent();
-
-            try
-            {
-                list.ItemsSource = RecordsModel.SelectRe();
-
-            }catch(Exception e)
-            {
-                list.ItemsSource = "";
-            }
-
            
         }
 
