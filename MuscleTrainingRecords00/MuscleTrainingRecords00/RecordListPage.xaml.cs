@@ -27,7 +27,6 @@ namespace MuscleTrainingRecords00
                 list.ItemsSource = "";
             }
 
-          
            
         }
 
