@@ -96,7 +96,7 @@ namespace MuscleTrainingRecords00
             }
         }
 
-        /*******************セレクトメソッド RecordListPage　追加**************************************/
+        /*******************セレクトメソッド RecordListPage　追加*************************************/
         public static List<RecordsModel> SelectRe()
         {
 
