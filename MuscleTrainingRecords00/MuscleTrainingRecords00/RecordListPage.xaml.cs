@@ -20,7 +20,7 @@ namespace MuscleTrainingRecords00
 
             try
             {
-                list.ItemsSource = RecordsModel.SelectRe().ToString();
+                list.ItemsSource = RecordsModel.SelectRe();
 
             }catch(Exception e)
             {
