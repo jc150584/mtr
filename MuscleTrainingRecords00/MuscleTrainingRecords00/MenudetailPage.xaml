@@ -12,8 +12,6 @@
                    FontSize="Large"
                    FontAttributes="Bold"/>
 
-            <Image x:Name="image"/>
-
             <Label Text=""
                    x:Name="Description"
                    HorizontalOptions="CenterAndExpand"
