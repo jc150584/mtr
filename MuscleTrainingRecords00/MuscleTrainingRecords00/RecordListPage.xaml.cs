@@ -18,7 +18,14 @@ namespace MuscleTrainingRecords00
         {
             InitializeComponent();
 
-            list.ItemsSource = RecordsModel.SelectRe().ToString();
+            try
+            {
+                list.ItemsSource = RecordsModel.SelectRe().ToString();
+
+            }catch(Exception e)
+            {
+                N.Text = "";
+            }
 
           
            
