@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace MuscleTrainingRecords00
 {
-    public class ReModel
+    class ReModel
     {
         public ObservableCollection<Record> Records
         {
