@@ -21,6 +21,18 @@ namespace MuscleTrainingRecords00
            
         }
 
+
+        //引っ張ったとき（更新）
+        private async void OnRefreshing(object sender, EventArgs e)
+        {
+            // 1秒処理を待つ
+            await Task.Delay(1000);
+
+            //リフレッシュを止める
+            list.IsRefreshing = false;
+
+        }
+
         private void RecordListButton(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MenuPage());

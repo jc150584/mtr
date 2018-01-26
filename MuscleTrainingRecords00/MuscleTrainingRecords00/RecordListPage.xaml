@@ -23,6 +23,7 @@
             </StackLayout.Margin>
             
             <ListView ItemsSource="{Binding Records}"
+                      Refreshing="OnRefreshing"
                       x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
