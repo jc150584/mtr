@@ -23,7 +23,9 @@
             </StackLayout.Margin>
             
             <ListView ItemsSource="{Binding Records}"
+                      IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
+                      HasUnevenRows="true"
                       RowHeight="65"
                       x:Name="list">
                 <ListView.ItemTemplate>
@@ -60,7 +62,7 @@
                                     <Label Text="{Binding M_set}" 
                                        Grid.Column="0" Grid.Row="0"
                                        FontAttributes="Bold"/>
-                                    <Label Text="{Binding M_date.StringFormat=yyyy/mm/dd}"
+                                    <Label Text="{Binding M_date}"
                                            x:Name="date"
                                        Grid.Column="0" Grid.Row="0"
                                        FontAttributes="Bold"/>
