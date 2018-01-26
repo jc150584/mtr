@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MuscleTrainingRecords00; assembly=MuscleTrainingRecords00"
-             xmlns:toolkit="clr-namespace:MuscleTrainingRecords00; assembly=MuscleTrainingRecords00"
+             xmlns:local="clr-namespace:MuscleTrainingRecords00;assembly=MuscleTrainingRecords00"
+             xmlns:toolkit="clr-namespace:MuscleTrainingRecords00;assembly=MuscleTrainingRecords00"
              x:Class="MuscleTrainingRecords00.RecordListPage"
              Title="記録" >
     
