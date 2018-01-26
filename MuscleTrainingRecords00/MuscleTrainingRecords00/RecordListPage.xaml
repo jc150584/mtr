@@ -7,7 +7,7 @@
              Title="記録" >
     
      <ContentPage.BindingContext>
-           <local:ReModel />
+           <local:ReModel/>
      </ContentPage.BindingContext>
     
     <!--上タブタイトル-->
