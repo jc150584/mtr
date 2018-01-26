@@ -5,6 +5,11 @@
              xmlns:toolkit="clr-namespace:MuscleTrainingRecords00; assembly=MuscleTrainingRecords00"
              x:Class="MuscleTrainingRecords00.RecordListPage"
              Title="記録" >
+    
+     <ContentPage.BindingContext>
+           <local:ReModel />
+     </ContentPage.BindingContext>
+    
     <!--上タブタイトル-->
     <ContentPage.Content>
 
@@ -18,10 +23,6 @@
                      Android="0, 0, 0, 0"
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
-            
-              <ContentPage.BindingContext>
-                  <local:ReModel />
-              </ContentPage.BindingContext>
             
             <ListView ItemsSource="{Binding Records}"
                       x:Name="list">
