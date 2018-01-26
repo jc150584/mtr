@@ -24,7 +24,7 @@
             
             <ListView ItemsSource="{Binding Records}"
                       Refreshing="OnRefreshing"
-                      RowHeight="25"
+                      RowHeight="65"
                       x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
