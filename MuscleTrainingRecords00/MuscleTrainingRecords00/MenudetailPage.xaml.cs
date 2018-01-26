@@ -34,7 +34,7 @@ namespace MuscleTrainingRecords00
         {
             string date = now.ToString("yyyy/mm/dd");
 
-            RecordsModel.InsertRe(1,t,0,0,0,now);
+            RecordsModel.InsertRe(1,t,0,0,0,date);
 
             Navigation.PushAsync(new RecordListPage());
 
