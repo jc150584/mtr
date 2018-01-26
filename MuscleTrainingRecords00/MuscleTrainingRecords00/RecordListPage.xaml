@@ -60,7 +60,8 @@
                                     <Label Text="{Binding M_set}" 
                                        Grid.Column="0" Grid.Row="0"
                                        FontAttributes="Bold"/>
-                                    <Label Text="{Binding M_date}" 
+                                    <Label Text=""{Binding M_date.StringFormat="+"yyyy/mm/dd"+"}""
+                                           x:Name="date"
                                        Grid.Column="0" Grid.Row="0"
                                        FontAttributes="Bold"/>
 
