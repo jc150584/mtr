@@ -6,10 +6,9 @@
              Title="記録" >
     
      <ContentPage.BindingContext>
-           <local:ReModel/>
+           <local:ReModel />
      </ContentPage.BindingContext>
     
-    <!--上タブタイトル-->
     <ContentPage.Content>
 
         <StackLayout>
@@ -56,7 +55,6 @@
                                        FontAttributes="Bold"/>
                                 </Grid>
                             </Grid>
-                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
