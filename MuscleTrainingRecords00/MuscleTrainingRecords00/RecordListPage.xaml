@@ -7,7 +7,6 @@
     
      <ContentPage.BindingContext>
         <local:ReModel />
-         
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
