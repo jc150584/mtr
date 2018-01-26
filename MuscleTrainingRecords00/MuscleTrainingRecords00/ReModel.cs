@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SQLite;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using SQLiteNetExtensions.Attributes;
-
 namespace MuscleTrainingRecords00
 {
     class ReModel
@@ -34,12 +26,12 @@ namespace MuscleTrainingRecords00
                 {
                     Record r = new Record
                     {
-                        M_no = m_no,
-                        M_name = m_name,
-                        M_weight = m_weight,
-                        M_leg = m_leg,
-                        M_set = m_set,
-                        M_date = m_date
+                        M_no = record.M_no,
+                        M_name = record.M_name,
+                        M_weight = record.M_weight,
+                        M_leg = record.M_leg,
+                        M_set = record.M_set,
+                        M_date = record.M_date
                     };
                     //一行ずつ追加
                     Records.Add(r);
