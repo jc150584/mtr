@@ -31,6 +31,8 @@ namespace MuscleTrainingRecords00
             //リフレッシュを止める
             list.IsRefreshing = false;
 
+            InitializeComponent();
+
         }
 
         private void RecordListButton(object sender, EventArgs e)

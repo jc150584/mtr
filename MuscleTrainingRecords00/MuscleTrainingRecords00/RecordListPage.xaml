@@ -24,6 +24,7 @@
             
             <ListView ItemsSource="{Binding Records}"
                       Refreshing="OnRefreshing"
+                      RowHeight="25"
                       x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -50,10 +51,19 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding M_weight}" 
+                                       Grid.Column="0" Grid.Row="0"
+                                       FontAttributes="Bold"/>
+                                    <Label Text="{Binding M_leg}" 
+                                       Grid.Column="0" Grid.Row="0"
+                                       FontAttributes="Bold"/>
+                                    <Label Text="{Binding M_set}" 
+                                       Grid.Column="0" Grid.Row="0"
+                                       FontAttributes="Bold"/>
                                     <Label Text="{Binding M_date}" 
                                        Grid.Column="0" Grid.Row="0"
-                                       HorizontalOptions="End"
                                        FontAttributes="Bold"/>
+
                                 </Grid>
                             </Grid>
                         </ViewCell>
