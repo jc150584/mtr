@@ -18,6 +18,7 @@ namespace MuscleTrainingRecords00
         public RecordListPage()
         {
             InitializeComponent();
+
            
         }
 
@@ -39,6 +40,11 @@ namespace MuscleTrainingRecords00
         {
             Navigation.PushAsync(new MenuPage());
             
+        }
+
+        private void list_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Navigation.PushAsync(new RecordPage());
         }
 
         /*private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)

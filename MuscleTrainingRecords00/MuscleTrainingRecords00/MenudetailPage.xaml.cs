@@ -32,9 +32,8 @@ namespace MuscleTrainingRecords00
 
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
-            string date = now.ToString("yyyy/mm/dd");
 
-            RecordsModel.InsertRe(1,t,0,0,0,date);
+            RecordsModel.InsertRe(1,t,0,0,0,now);
 
             Navigation.PushAsync(new RecordListPage());
 
