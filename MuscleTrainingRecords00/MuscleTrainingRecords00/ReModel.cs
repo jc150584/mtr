@@ -23,6 +23,7 @@ namespace MuscleTrainingRecords00
         {
             //今日の日付
             DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            
 
             if (RecordsModel.SelectRecords() != null)
             {
@@ -78,4 +79,3 @@ namespace MuscleTrainingRecords00
         }
     }
 }
-

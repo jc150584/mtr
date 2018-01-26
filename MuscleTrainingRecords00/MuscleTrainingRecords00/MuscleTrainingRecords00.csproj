@@ -64,6 +64,7 @@
       <DependentUpon>RecordPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="RecordsModel.cs" />
+    <Compile Include="ReModel.cs" />
     <Compile Include="RMPage.xaml.cs">
       <DependentUpon>RMPage.xaml</DependentUpon>
     </Compile>

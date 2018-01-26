@@ -6,8 +6,8 @@
              Title="記録" >
     
      <ContentPage.BindingContext>
-           <local:ReModel />
-     </ContentPage.BindingContext>
+        <local:ReModel />
+    </ContentPage.BindingContext>
     
     <ContentPage.Content>
 
