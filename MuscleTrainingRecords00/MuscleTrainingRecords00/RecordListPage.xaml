@@ -28,7 +28,8 @@
                       HasUnevenRows="true"
                       RowHeight="65"
                       ItemTapped="list_ItemTapped"
-                      x:Name="list">
+                      x:Name="list"
+                      HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -45,7 +46,8 @@
 
                                 <Label Text="{Binding M_name}" 
                                    Grid.Column="0" Grid.Row="0"
-                                   FontAttributes="Bold"/>
+                                   FontAttributes="Bold"
+                                       WidthRequest="200"/>
                                 <Grid Grid.Column="1" Grid.Row="0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
