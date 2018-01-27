@@ -19,7 +19,7 @@
 
            
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
 
                 <Button x:Name="全部"
