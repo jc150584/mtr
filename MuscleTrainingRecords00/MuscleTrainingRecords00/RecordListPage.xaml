@@ -25,7 +25,6 @@
             <ListView ItemsSource="{Binding Records}"
                       IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
-                      HasUnevenRows="true"
                       RowHeight="65"
                       ItemTapped="list_ItemTapped"
                       x:Name="list"
