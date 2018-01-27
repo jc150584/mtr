@@ -118,22 +118,7 @@ namespace MuscleTrainingRecords00
 
         }
 
-        //SearchBarを押した時のイベントハンドラ
-        private void Select_SearchButtonPressed(object sender, EventArgs e)
-        {
-            /*TrainingDatabase itemDataBase = TrainingDatabase.getDatabase();
-            List<Training> itemList = await itemDataBase.GetItemsAsyncByParts(Select.Text);
-            listView.ItemsSource = itemList;*/
-
-            /*if (0<=Select.Text.IndexOf(array1))
-            {   
-            }
-            else
-            {
-                this.listView.ItemsSource = "データがありません";
-            }*/
-
-        }
+        
 
         private async void 全部_Clicked(object sender, EventArgs e)
         {
@@ -182,29 +167,7 @@ namespace MuscleTrainingRecords00
             listView.ItemsSource = itemList;
         }
 
-        private void Sort_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-            //int s = Sort.SelectedIndex;
-            String si = (String)Sort.SelectedItem;
-            //if (si==0)
-            if (si.Equals("負荷度順"))
-            {
-                // 配列に値を入れる
-                int[] array1 = new int[] { 5, 4, 3, 2, 1 };
-
-                // ListViewを生成する
-                listView.ItemsSource = array1;
-            }
-            else
-            {
-                // 配列に値を入れる
-                int[] array1 = new int[] { 5, 4, 3, 2, 1 };
-
-                // ListViewを生成する
-                listView.ItemsSource = array1;
-            }
-        }
+        
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
