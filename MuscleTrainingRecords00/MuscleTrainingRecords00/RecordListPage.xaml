@@ -21,7 +21,11 @@
                      Android="0, 0, 0, 0"
                      WinPhone="0, 0, 0, 0" />
             </StackLayout.Margin>
-            
+
+            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start">
+                <Label Text ="トレーニング名" HorizontalOptions="Start"/>
+                <Label Text="更新日" HorizontalOptions="End"/>
+            </StackLayout>
             <ListView ItemsSource="{Binding Records}"
                       IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
@@ -37,16 +41,15 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*" />
-                                    <ColumnDefinition Width="2*" />
-                                    <ColumnDefinition Width="1*" />
-                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
                                 <Label Text="{Binding M_name}" 
                                    Grid.Column="0" Grid.Row="0"
-                                   FontAttributes="Bold"
-                                       WidthRequest="200"/>
+                                   FontAttributes="Bold"/>
                                 <Grid Grid.Column="1" Grid.Row="0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
