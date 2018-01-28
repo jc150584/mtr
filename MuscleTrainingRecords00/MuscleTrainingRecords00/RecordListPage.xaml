@@ -90,7 +90,7 @@
                                            x:Name="date"
                                        Grid.Column="0" Grid.Row="0"
                                        FontAttributes="Bold"/>
-                                    <Button x:Name="btnTest"  Image="ic_delete.png"/>
+                                    <Button x:Name="btnTest"  Image="ic_delete_2x.png" HorizontalOptions="End"/>
 
                                 </Grid>
                                 

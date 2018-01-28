@@ -17,22 +17,28 @@
                     FontSize="15"/>
         </StackLayout> -->
 
-            <Label x:Name="label1"
-               Text=" "
-               HorizontalOptions="Center"
-               FontSize="35"/>
+            <StackLayout.Margin>
+
+                <!-- iOSはトップに 20 の余白が必要 -->
+                <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                     Android="0, 0, 0, 0"
+                     WinPhone="0, 0, 0, 0" />
+            </StackLayout.Margin>
 
             <BoxView BackgroundColor="Black"
                  HeightRequest="0.5"
                  WidthRequest="300"/>
+            
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="labelC"
-               Text="日付                "
-               FontSize="35"/>
+                <Image Source="small-calendar.png" HorizontalOptions="Start" />
+                <Label 
+               Text="日付 "
+               FontSize="35"
+                    HorizontalOptions="StartAndExpand"/>
+                
 
-                <DatePicker Format="D" VerticalOptions="Center"
-                    WidthRequest="200"
-                    HeightRequest="15"
+                <DatePicker Format="D" HorizontalOptions="EndAndExpand"
                     DateSelected="DatePicker_DateSelected"
                             x:Name="DatePicker"/>
             </StackLayout>
@@ -42,20 +48,20 @@
                  WidthRequest="300"/>
 
             <StackLayout Orientation="Horizontal">
+                <Image Source="dumbbell2.png" HorizontalOptions="Start" />
 
-                <Label x:Name="label2"
-               Text="重量(kg)            "
+                <Label 
+               Text="重量(kg)"
+                    HorizontalOptions="StartAndExpand"
                FontSize="35"/>
 
-                <Entry HorizontalOptions="Center"
-                   WidthRequest="130"
-                   HeightRequest="15"
+                <Entry HorizontalOptions="EndAndExpand"
+                   
                    Keyboard ="Numeric"
                    PlaceholderColor="White"
                    x:Name="Weight"
                    />
-
-
+                
                 <Label x:Name="KG"
                    Text="kg"
                    FontSize="35"/>
@@ -66,13 +72,14 @@
                  WidthRequest="300"/>
 
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="label3"
-               Text="レッグ(回数)      "
-               FontSize="35"/>
+                <Image Source="repeat.png" HorizontalOptions="Start"/>
+                <Label
+               Text="レッグ(回数)"
+               FontSize="35"
+                    HorizontalOptions="StartAndExpand"/>
 
-                <Entry HorizontalOptions="End"
-                   WidthRequest="130"
-                   HeightRequest="15"
+                <Entry 
+                   HorizontalOptions="EndAndExpand"
                    Keyboard ="Numeric"
                    x:Name="Leg"/>
 
@@ -83,13 +90,15 @@
                  WidthRequest="300"/>
 
             <StackLayout Orientation="Horizontal">
+                <Image Source="numbered-list.png" HorizontalOptions="Start"/>
+                
+                <Label 
+               Text="セット数"
+               FontSize="35"
+                    HorizontalOptions="StartAndExpand"/>
 
-                <Label x:Name="label4"
-               Text="セット数            "
-               FontSize="35"/>
-
-                <Entry WidthRequest="130"
-                   HeightRequest="25"
+                <Entry
+                    HorizontalOptions="EndAndExpand"
                    Keyboard ="Numeric"
                    x:Name="Set"/>
                 
@@ -100,6 +109,7 @@
                     Clicked="Insert_Clicked"
                     HorizontalOptions="EndAndExpand"
                     FontSize="15"
+                    
                     />
         </StackLayout>
     </ContentPage.Content>

@@ -250,6 +250,24 @@
   <ItemGroup>
     <BundleResource Include="Resources\ic_delete.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_delete_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\small-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dumbbell2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\repeat.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\numbered-list.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
