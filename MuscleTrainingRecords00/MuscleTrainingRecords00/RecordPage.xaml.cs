@@ -49,6 +49,14 @@ namespace MuscleTrainingRecords00
 
 
         }
-        
+
+        private void addItemButton_Clicked(object sender, EventArgs e)
+        {
+
+            if(KG.Text == null || Reps.Text == null || Set.Text == null)
+            {
+                DisplayAlert("", "入力が不足しています", "OK");
+            }
+        }
     }
 }

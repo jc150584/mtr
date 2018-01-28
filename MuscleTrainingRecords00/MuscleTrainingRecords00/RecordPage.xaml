@@ -42,6 +42,7 @@
 
                 <DatePicker Format="D" HorizontalOptions="EndAndExpand"
                     DateSelected="DatePicker_DateSelected"
+                            WidthRequest="200"
                             x:Name="DatePicker"/>
             </StackLayout>
 
@@ -58,7 +59,7 @@
                FontSize="35"/>
 
                 <Entry HorizontalOptions="EndAndExpand"
-                   
+                   WidthRequest="200"
                    Keyboard ="Numeric"
                        Placeholder="Kg"
                    PlaceholderColor="White"
@@ -82,10 +83,11 @@
                     HorizontalOptions="StartAndExpand"/>
 
                 <Entry 
+                    WidthRequest="200"
                    HorizontalOptions="EndAndExpand"
                    Keyboard ="Numeric"
                     Placeholder="回数"
-                   x:Name="Leg"/>
+                   x:Name="Reps"/>
 
             </StackLayout>
 
@@ -102,6 +104,7 @@
                     HorizontalOptions="StartAndExpand"/>
 
                 <Entry
+                    WidthRequest="200"
                     HorizontalOptions="EndAndExpand"
                    Keyboard ="Numeric"
                     Placeholder="Set"
@@ -111,7 +114,7 @@
 
             </StackLayout>
             <StackLayout Orientation="Vertical">
-                <Button   Text="保存" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
+                <Button   Text="保存" Clicked="addItemButton_Clicked" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
