@@ -32,9 +32,11 @@
             
             <StackLayout Orientation="Horizontal">
                 <Image Source="small-calendar.png" HorizontalOptions="Start" />
+                
                 <Label 
-               Text="日付 "
-               FontSize="35"
+                     Text="日付"
+                     FontSize="35"
+                    
                     HorizontalOptions="StartAndExpand"/>
                 
 
@@ -58,6 +60,7 @@
                 <Entry HorizontalOptions="EndAndExpand"
                    
                    Keyboard ="Numeric"
+                       Placeholder="Kg"
                    PlaceholderColor="White"
                    x:Name="Weight"
                    />
@@ -74,13 +77,14 @@
             <StackLayout Orientation="Horizontal">
                 <Image Source="repeat.png" HorizontalOptions="Start"/>
                 <Label
-               Text="レッグ(回数)"
+               Text="Reps(回数)"
                FontSize="35"
                     HorizontalOptions="StartAndExpand"/>
 
                 <Entry 
                    HorizontalOptions="EndAndExpand"
                    Keyboard ="Numeric"
+                    Placeholder="回数"
                    x:Name="Leg"/>
 
             </StackLayout>
@@ -100,17 +104,15 @@
                 <Entry
                     HorizontalOptions="EndAndExpand"
                    Keyboard ="Numeric"
+                    Placeholder="Set"
                    x:Name="Set"/>
                 
                 
 
             </StackLayout>
-            <Button Text="保存" 
-                    Clicked="Insert_Clicked"
-                    HorizontalOptions="EndAndExpand"
-                    FontSize="15"
-                    
-                    />
+            <StackLayout Orientation="Vertical">
+                <Button   Text="保存" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
