@@ -29,7 +29,7 @@ namespace MuscleTrainingRecords00
         {
 
             int WeightText = int.Parse(Weight.Text);
-            int LegText = int.Parse(Leg.Text);
+            int RepsText = int.Parse(Reps.Text);
             int SetText = int.Parse(Set.Text);
 
 
