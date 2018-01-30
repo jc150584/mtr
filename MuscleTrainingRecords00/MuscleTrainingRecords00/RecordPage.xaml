@@ -33,6 +33,7 @@
             <StackLayout Orientation="Horizontal">
                 <Image Source="small-calendar.png" HorizontalOptions="Start" />
                 
+                
                 <Label 
                      Text="日付"
                      FontSize="35"
