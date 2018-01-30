@@ -45,7 +45,7 @@ namespace MuscleTrainingRecords00
 
         private void list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Record record = (Record)list.SelectedItem;
+            ReMadel.Record record = (ReMadel.Record)list.SelectedItem;
 
             string l = record.M_name;
 
