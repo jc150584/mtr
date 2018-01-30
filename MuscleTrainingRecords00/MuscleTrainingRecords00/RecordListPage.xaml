@@ -85,7 +85,7 @@
                                            FontAttributes="Bold"/>
                                     <Button x:Name="btnTest" 
                                             Image="ic_delete_2x.png" 
-                                            HorizontalOptions="End"
+                                            HorizontalOptions="Center"
                                             Grid.Column="3" Grid.Row="0"/>
                             </Grid>
                         </ViewCell>
