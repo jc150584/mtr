@@ -13,8 +13,6 @@ namespace MuscleTrainingRecords00
 
         public ReModel()
         {
-            //今日の日付
-            DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
 
             if (RecordsModel.SelectRecords() != null)
@@ -38,10 +36,10 @@ namespace MuscleTrainingRecords00
                 }
             }
 
-            if(RecoedsModel.SelectRecords() == M_no)
+            /*if(RecoedsModel.SelectRecords() == M_no)
             {
 
-            }
+            }*/
 
             else
             {
@@ -49,11 +47,7 @@ namespace MuscleTrainingRecords00
            {
                new Record
                {
-                   M_name = "データなし",
-                   M_weight = 0,
-                   M_leg = 0,
-                   M_set = 0,
-                   M_date = now
+                   M_name = "データなし"
                }
            };
             }
