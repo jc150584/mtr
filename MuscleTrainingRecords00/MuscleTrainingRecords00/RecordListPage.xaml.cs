@@ -46,10 +46,9 @@ namespace MuscleTrainingRecords00
 
         private void list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            ///RecordsModel record = (RecordsModel)list.SelectedItem;
+            ReModel record = (ReModel)list.SelectedItem;
 
-            string l =  list.SelectedItem;
-                //record.m_name;
+            string l =  record.M_name;
 
             Navigation.PushAsync(new RecordPage(l));
 
