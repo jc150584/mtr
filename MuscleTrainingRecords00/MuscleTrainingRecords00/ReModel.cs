@@ -36,7 +36,7 @@ namespace MuscleTrainingRecords00
                 }
             }
 
-            /*if(RecoedsModel.SelectRecords() == M_no)
+            /*if(RecoedsModel.SelectRecords())
             {
 
             }*/

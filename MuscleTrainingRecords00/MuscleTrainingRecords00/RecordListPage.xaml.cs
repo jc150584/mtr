@@ -40,15 +40,14 @@ namespace MuscleTrainingRecords00
 
         private void RecordListButton(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MenuPage());
-            
+            Navigation.PushAsync(new MenuPage());            
         }
 
         private void list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-           RecordsModel record = (RecordsModel)list.SelectedItem;
+            ReModel record = (ReModel)list.SelectedItem;
 
-            string l = record.M_name.ToString();
+            string l = record.M_name;
 
            // DisplayAlert("",list.SelectedItem.ToString(),"OK");
 
