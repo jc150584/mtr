@@ -80,7 +80,6 @@
                                            Grid.Column="2" Grid.Row="0"
                                            FontAttributes="Bold"/>
                                     <Button x:Name="btnTest" 
-                                            Clicked="buttton_Clicked"
                                             Image="ic_delete_2x.png" 
                                             HorizontalOptions="End"
                                             Grid.Column="3" Grid.Row="0"/>

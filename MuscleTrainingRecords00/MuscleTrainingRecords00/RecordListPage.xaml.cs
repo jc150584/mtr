@@ -57,10 +57,10 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new RecordPage());
         }
 
-        private async void button_Clicked(object sender, EventArgs e)
+        /*private async void button_Clicked(object sender, EventArgs e)
         {
-
-        }
+            RecordsModel.DeleteRecords();
+        }*/
 
     }
 }
