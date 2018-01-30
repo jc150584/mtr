@@ -46,15 +46,15 @@ namespace MuscleTrainingRecords00
 
         private void list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-           /* RecordsModel record = (RecordsModel)list.SelectedItem;
+           RecordsModel record = (RecordsModel)list.SelectedItem;
 
-            string l =  record.M_name;
+            string l = record.M_name.Text;
 
-            DisplayAlert("",l,"");*/
+            //DisplayAlert("",l,"");
 
-            //Navigation.PushAsync(new RecordPage(l));
+            Navigation.PushAsync(new RecordPage(l));
 
-            Navigation.PushAsync(new RecordPage());
+            //Navigation.PushAsync(new RecordPage());
         }
 
         /*private async void button_Clicked(object sender, EventArgs e)

@@ -16,11 +16,12 @@ namespace MuscleTrainingRecords00
         DateTime yyyymmdd;
 
         string t;
-        public RecordPage()//string l
+        public RecordPage(string l)//string l
         {
             InitializeComponent();
 
-            //test.Text = l;
+            test.Text = l;
+
 
             //t = l;
             
