@@ -45,8 +45,19 @@ namespace MuscleTrainingRecords00
         }
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-           ;
 
+        }
+
+        //引っ張ったとき（更新）
+        private async void OnRefreshing(object sender, EventArgs e)
+        {
+            // 1秒処理を待つ
+            await Task.Delay(1000);
+
+            //リフレッシュを止める
+            list.IsRefreshing = false;
+
+            InitializeComponent();
 
         }
 

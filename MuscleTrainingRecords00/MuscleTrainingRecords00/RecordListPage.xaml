@@ -63,34 +63,17 @@
                                     <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="1*" />
-                                    <ColumnDefinition Width="1*" />
                                 </Grid.ColumnDefinitions>
 
                                 <Label Text="{Binding M_name}" 
-                                   Grid.Column="0" Grid.Row="0"
+                                   Grid.Column="0" Grid.Row="2"
                                    FontAttributes="Bold"/>
-                                <Grid Grid.Column="1" Grid.Row="0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding M_weight}" 
-                                       Grid.Column="0" Grid.Row="0"
-                                       FontAttributes="Bold"/>
-                                    <Label Text="{Binding M_leg}" 
-                                       Grid.Column="0" Grid.Row="0"
-                                       FontAttributes="Bold"/>
-                                    <Label Text="{Binding M_set}" 
-                                       Grid.Column="0" Grid.Row="0"
-                                       FontAttributes="Bold"/>
                                     <Label Text="{Binding M_date}"
                                            x:Name="date"
-                                       Grid.Column="0" Grid.Row="0"
+                                       Grid.Column="0" Grid.Row="3"
                                        FontAttributes="Bold"/>
-                                    <Button x:Name="btnTest"  Image="ic_delete_2x.png" HorizontalOptions="End"/>
+                                    <Button x:Name="btnTest"  Image="ic_delete_2x.png" HorizontalOptions="End"
+                                            Grid.Column="0" Grid.Row="4"/>
 
                                 </Grid>
                                 
