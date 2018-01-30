@@ -165,7 +165,7 @@ namespace MuscleTrainingRecords00
             }
         }
 
-        /********************アップデートメソッド（プラス）**************************************/
+        /********************アップデートメソッド RecordPageに使用**************************************/
         public static List<RecordsModel> UpdateStockPlus(int m_no, int m_name, int m_weight, int m_leg, int m_set)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
