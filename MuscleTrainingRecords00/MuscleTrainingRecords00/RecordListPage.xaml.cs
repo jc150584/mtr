@@ -48,7 +48,7 @@ namespace MuscleTrainingRecords00
         {
            RecordsModel record = (RecordsModel)list.SelectedItem;
 
-            string l = record.M_name.Text;
+            string l = record.M_name;
 
             //DisplayAlert("",l,"");
 
