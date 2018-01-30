@@ -50,7 +50,7 @@ namespace MuscleTrainingRecords00
 
             //string l = record.M_name;
 
-            DisplayAlert("",list.SelectedItem,"OK");
+            DisplayAlert("",list.SelectedItem.ToString(),"OK");
 
             //Navigation.PushAsync(new RecordPage(l));
 
