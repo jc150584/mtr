@@ -57,25 +57,10 @@ namespace MuscleTrainingRecords00
             Navigation.PushAsync(new RecordPage());
         }
 
-        /*private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void button_Clicked(object sender, EventArgs e)
         {
-            string i = test;
-           Navigation.PushAsync(new RecordPage(i));
-        }*/
 
-        /* private void insertButtonClicked(object sender, EventArgs e)
-         {
-             Navigation.PushAsync(new RecordPage());
-         }
-         */
-
-        /* private async void OnRefreshing(object sender , EventArgs e)
-         {
-             await Task.Delay(1000);
-             list.IsRefreshing = false;
-             InitializeComponent();
-         }
-         */
+        }
 
     }
 }
