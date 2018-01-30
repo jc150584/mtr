@@ -38,6 +38,11 @@ namespace MuscleTrainingRecords00
                 }
             }
 
+            if(RecoedsModel.SelectRecords() == M_no)
+            {
+
+            }
+
             else
             {
                 Records = new ObservableCollection<Record>

@@ -15,7 +15,6 @@ namespace MuscleTrainingRecords00
 
         //今日の日付
         DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-        string day = now.ToString(yyyy/mm/dd);
         public MenudetaliPage(string m, string d, string i)//String m
         {
             InitializeComponent();
