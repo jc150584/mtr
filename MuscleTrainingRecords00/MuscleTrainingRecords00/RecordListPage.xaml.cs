@@ -48,7 +48,7 @@ namespace MuscleTrainingRecords00
         {
            RecordsModel record = (RecordsModel)list.SelectedItem;
 
-            string l = record.M_name;
+            string l = record.m_name;
 
             Navigation.PushAsync(new RecordPage(l));
 
