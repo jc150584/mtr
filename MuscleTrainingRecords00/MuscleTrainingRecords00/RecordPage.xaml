@@ -117,8 +117,8 @@
             <StackLayout Orientation="Vertical">
                 <Button   Text="保存" Clicked="addItemButton_Clicked" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
                 
-                <ListView/
-                    >
+                <ListView/>
+                
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
