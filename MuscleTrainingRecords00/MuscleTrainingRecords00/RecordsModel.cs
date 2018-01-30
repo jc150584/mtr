@@ -166,14 +166,14 @@ namespace MuscleTrainingRecords00
         }
 
         /********************アップデートメソッド（プラス）**************************************/
-        public static List<StockFoodModel> UpdateStockPlus(int m_no, int m_name, int m_weight, int m_leg, int m_set)
+        public static List<RecordsModel> UpdateStockPlus(int m_no, int m_name, int m_weight, int m_leg, int m_set)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
                     //データベースに指定したSQLを発行
-                    return db.Query<StockFoodModel>("UPDATE [Records] SET [M_no] = [m_no] ,[M_weight] = [m_weight] , [M_leg] = [m_leg] ,[M_set] = [m_set] WHERE [M_name] = [m_name]");
+                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_no] = [m_no] ,[M_weight] = [m_weight] , [M_leg] = [m_leg] ,[M_set] = [m_set] WHERE [M_name] = [m_name]");
 
                 }
                 catch (Exception e)
