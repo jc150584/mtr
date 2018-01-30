@@ -16,11 +16,11 @@ namespace MuscleTrainingRecords00
         DateTime yyyymmdd;
 
         string t;
-        public RecordPage(string l)//string l
+        public RecordPage()//string l
         {
             InitializeComponent();
 
-            test.Text = l;
+            //test.Text = l;
 
 
             //t = l;
@@ -38,13 +38,6 @@ namespace MuscleTrainingRecords00
 
             DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
-
-            //RecordsModel.InsertRecords(Weight.Text, Leg.Text, Set.Text, yyyymmdd);//試し
-            //RecordsModel.InsertRe(1, t ,WeightText, LegText, SetText, now);
-
-            //DisplayAlert("", t +""+ WeightText + ""+LegText+""+SetText, "OK");
-
-            //Navigation.PushAsync(new RecordListPage());
         }
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
