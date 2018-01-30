@@ -54,6 +54,8 @@ namespace MuscleTrainingRecords00
             }
         }
 
+
+
         public class Record
         {
             public int M_no { get; set; } //筋トレNo 主キー

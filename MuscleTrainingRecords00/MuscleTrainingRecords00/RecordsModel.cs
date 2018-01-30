@@ -24,7 +24,7 @@ namespace MuscleTrainingRecords00
 
         public DateTime M_date { get; set; } //日付
 
-        
+
 
 
         //[ForeignKey(typeof(SettingModel))]
@@ -63,7 +63,7 @@ namespace MuscleTrainingRecords00
                     //データベースにFoodテーブルを作成する
                     db.CreateTable<RecordsModel>();
 
-                    db.Insert(new RecordsModel() { M_no = m_no, M_name = m_name, M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date});
+                    db.Insert(new RecordsModel() { M_no = m_no, M_name = m_name, M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date });
                     db.Commit();
                 }
                 catch (Exception e)
@@ -77,16 +77,16 @@ namespace MuscleTrainingRecords00
         /*******************セレクトメソッド**************************************/
         public static List<RecordsModel> SelectRecords()
         {
-            
+
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
-             
+
                 try
                 {
-                    
+
                     //データベースに指定したSQLを発行
                     return db.Query<RecordsModel>("SELECT * FROM [Records]");
-                   // ORDER BY[M_date]
+                    // ORDER BY[M_date]
                 }
                 catch (Exception e)
                 {
@@ -133,7 +133,7 @@ namespace MuscleTrainingRecords00
 
                     db.Delete<RecordsModel>(m_no);//デリートで渡す値は主キーじゃないといけない説
                     db.Commit();
-                   
+
                 }
                 catch (Exception e)
                 {
@@ -165,30 +165,22 @@ namespace MuscleTrainingRecords00
             }
         }
 
-        /********************アップデートメソッド（日付）*************************************/
-        public static void UpdateF_date(int m_no, int m_weight, int m_leg, int m_set, DateTime m_date)
+        /********************アップデートメソッド（プラス）**************************************/
+        public static List<StockFoodModel> UpdateStockPlus(int m_no, int m_name, int m_weight, int m_leg, int m_set)
         {
-            //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    //データベースにテーブルを作成する
-                    db.CreateTable<RecordsModel>();
+                    //データベースに指定したSQLを発行
+                    return db.Query<StockFoodModel>("UPDATE [Records] SET [M_no] = [m_no] ,[M_weight] = [m_weight] , [M_leg] = [m_leg] ,[M_set] = [m_set] WHERE [M_name] = [m_name]");
 
-                    //TimeSpan t = f_date - new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day+1);//よくわからん
-                    TimeSpan t = m_date - new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);//よくわからん
-
-                    int span = t.Days;
-
-                    db.Update(new RecordsModel() { M_no = m_no, M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date });
-
-                    db.Commit();
                 }
                 catch (Exception e)
                 {
-                    db.Rollback();
+
                     System.Diagnostics.Debug.WriteLine(e);
+                    return null;
                 }
             }
         }

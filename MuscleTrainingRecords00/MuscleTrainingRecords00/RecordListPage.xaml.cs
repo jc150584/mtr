@@ -13,7 +13,6 @@ namespace MuscleTrainingRecords00
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordListPage : ContentPage
     {
-        private string test;
 
         public RecordListPage()
         {
@@ -49,11 +48,11 @@ namespace MuscleTrainingRecords00
         {
             //RecordsModel record = (RecordsModel)list.SelectedItem;
 
-            //string l = record.M_name;
+            string l = record.M_name;
 
-            //Navigation.PushAsync(new RecordPage(l));
+            Navigation.PushAsync(new RecordPage(l));
 
-            Navigation.PushAsync(new RecordPage());
+            //Navigation.PushAsync(new RecordPage());
         }
 
         /*private void Records1_ItemTapped(object sender, ItemTappedEventArgs e)

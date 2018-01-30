@@ -111,6 +111,8 @@
                     Placeholder="Set"
                    x:Name="Set"/>
                 
+                <Label x:Name ="test"/>
+                
                 
 
             </StackLayout>
