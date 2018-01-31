@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="MenuPageCS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record.cs" />
     <Compile Include="RecordListPage.xaml.cs">
       <DependentUpon>RecordListPage.xaml</DependentUpon>
     </Compile>
