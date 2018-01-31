@@ -49,7 +49,13 @@ namespace MuscleTrainingRecords00
            {
                new Recordv2
                {
-                   M_name = "データなし"
+                   M_no=0,
+                   M_name="データなし",
+                   M_weight=0,
+                   M_leg=0,
+                   M_set=0,
+                   M_date= new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day);
+
                }
            };
             }
