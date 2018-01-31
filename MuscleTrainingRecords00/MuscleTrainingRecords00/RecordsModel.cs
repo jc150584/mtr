@@ -166,7 +166,7 @@ namespace MuscleTrainingRecords00
         }
 
         /********************アップデートメソッド RecordPageに使用**************************************/
-        public static List<RecordsModel> UpdateRecord(int m_no, int m_weight, int m_leg, int m_set,DateTime m_date)
+        public static void  UpdateRecord(int m_no, int m_weight, int m_leg, int m_set,DateTime m_date)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
