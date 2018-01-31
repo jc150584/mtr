@@ -16,13 +16,14 @@ namespace MuscleTrainingRecords00
         DateTime yyyymmdd;
 
         int t;
+        string x;
         public RecordPage(string l, int m)//string l
         {
             InitializeComponent();
 
             m_name.Text = l;
 
-
+            x = l;
             t = m;
             
         }
@@ -56,7 +57,7 @@ namespace MuscleTrainingRecords00
 
             DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
-            RecordsModel.UpdateRecord(t,WeightText,RepsText,SetText,now);
+            RecordsModelv2.InsertRe(t,x,WeightText,RepsText,SetText,now);
 
         }
     }

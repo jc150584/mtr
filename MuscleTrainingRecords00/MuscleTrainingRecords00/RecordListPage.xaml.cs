@@ -50,6 +50,7 @@ namespace MuscleTrainingRecords00
             Record n =(Record)(list.SelectedItem);
             int m = n.M_no;
 
+            ReModelv2.key = m;
             Navigation.PushAsync(new RecordPage(l,m));
 
         }

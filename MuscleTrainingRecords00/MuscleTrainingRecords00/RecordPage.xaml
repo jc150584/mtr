@@ -6,7 +6,7 @@
     
     
      <ContentPage.BindingContext>
-        <local:ReModel />
+        <local:ReModelv2 />
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
@@ -170,10 +170,10 @@
                                    Grid.Column="0" Grid.Row="0"
                                    FontAttributes="Bold"/>
                                     <Label Text="{Binding M_weight}"
-                                           Grid.Column="2" Grid.Row="0"
+                                           Grid.Column="1" Grid.Row="0"
                                            FontAttributes="Bold"/>
                                     <Label Text="{Binding M_leg}" 
-                                            Grid.Column="3" Grid.Row="0"
+                                            Grid.Column="2" Grid.Row="0"
                                            FontAttributes="Bold"/>
                                     <Label Text="{Binding M_set}" 
                                             Grid.Column="3" Grid.Row="0"
