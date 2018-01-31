@@ -23,7 +23,7 @@ namespace MuscleTrainingRecords00
             m_name.Text = l;
 
 
-            t = m;
+            t = l;
             
         }
 
@@ -56,7 +56,7 @@ namespace MuscleTrainingRecords00
 
             DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
-            RecordsModel.UpdateRecord(m,WeightText,RepsText,SetText,now);
+            RecordsModel.UpdateRecord(t,WeightText,RepsText,SetText,now);
 
         }
     }
