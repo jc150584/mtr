@@ -182,7 +182,7 @@ namespace MuscleTrainingRecords00
                     //データベースに指定したSQLを発行
                     //return db.Query<RecordsModel>("UPDATE [Records] SET [M_weight] = "+ weight +", [M_leg] = "+ leg +",[M_set] = "+ set + "WHERE [M_no] = "+ m_no);
 
-                    db.Update(new RecordsModel() { M_no = m_no, M_weight = m_weight, M_leg = leg, M_set = m_set, M_date = m_date });
+                    db.Update(new RecordsModel() { M_no = m_no, M_weight = m_weight, M_leg = m_leg, M_set = m_set, M_date = m_date });
 
                     db.Commit();
                 }
