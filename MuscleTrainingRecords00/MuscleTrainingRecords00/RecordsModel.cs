@@ -174,8 +174,8 @@ namespace MuscleTrainingRecords00
                 int weight = m_weight;
                 int leg = m_leg;
                 int set = m_set;
-                TimeSpan span = m_date;
-                int date = span.Days;
+                /*TimeSpan span = m_date;
+                int date = span.Days;*/
 
                 try
                 {
