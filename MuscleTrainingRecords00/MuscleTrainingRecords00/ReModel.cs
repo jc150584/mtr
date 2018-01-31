@@ -53,7 +53,5 @@ namespace MuscleTrainingRecords00
             }
         }
 
-
-
     }
 }

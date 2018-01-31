@@ -2,6 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MuscleTrainingRecords00.RecordPage">
+    
+    
+     <ContentPage.BindingContext>
+        <local:ReModel />
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                  Spacing="50">
@@ -30,21 +36,13 @@
                  HeightRequest="0.5"
                  WidthRequest="300"/>
             
-            <StackLayout Orientation="Horizontal">
-                <Image Source="small-calendar.png" HorizontalOptions="Start" />
-                
+            <StackLayout Orientation="Vertical">
                 
                 <Label 
-                     Text="日付"
+                     x:Name ="m_name"
                      FontSize="35"
-                    
-                    HorizontalOptions="StartAndExpand"/>
-                
-
-                <DatePicker Format="D" HorizontalOptions="EndAndExpand"
-                    DateSelected="DatePicker_DateSelected"
-                            WidthRequest="200"
-                            x:Name="DatePicker"/>
+                    HorizontalOptions="Center"/>
+               
             </StackLayout>
 
             <BoxView BackgroundColor="Black"
@@ -64,8 +62,7 @@
                    Keyboard ="Numeric"
                        Placeholder="Kg"
                    PlaceholderColor="White"
-                   x:Name="Weight"
-                   />
+                   x:Name="Weight"/>
                 
                 <Label x:Name="KG"
                    Text="kg"
@@ -111,7 +108,7 @@
                     Placeholder="Set"
                    x:Name="Set"/>
                 
-                <Label x:Name ="test"/>
+               
                 
                 
 
@@ -119,12 +116,74 @@
             <StackLayout Orientation="Vertical">
                 <Button   Text="保存" Clicked="addItemButton_Clicked" x:Name="addItemButton" BackgroundColor="RoyalBlue" TextColor="White" FontSize="Large" VerticalOptions="EndAndExpand" />
                 
-                <ListView 
-                    IsPullToRefreshEnabled="True"
+                <Grid Padding="0,10,0,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="日付" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="0" Grid.Row="0"/>
+                <Label Text="重量（kg）" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="1" Grid.Row="0"
+                       HorizontalOptions="Center"/>
+                <Label Text="Reps（回数）" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="2" Grid.Row="0"
+                       HorizontalOptions="Center"/>
+                    <Label Text="セット" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="3" Grid.Row="0"
+                       HorizontalOptions="Center"/>
+
+            </Grid>
+                
+                 <ListView ItemsSource="{Binding Records}"
+                      IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
                       RowHeight="65"
+                      ItemTapped="list_ItemTapped"
                       x:Name="list"
-                      HasUnevenRows="True"/>
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,20,10,20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding M_date}" 
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontAttributes="Bold"/>
+                                    <Label Text="{Binding M_weight}"
+                                           Grid.Column="2" Grid.Row="0"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding M_leg}" 
+                                            Grid.Column="3" Grid.Row="0"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding M_set}" 
+                                            Grid.Column="3" Grid.Row="0"
+                                           FontAttributes="Bold"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
                 
             </StackLayout>
         </StackLayout>

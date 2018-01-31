@@ -47,7 +47,10 @@ namespace MuscleTrainingRecords00
             Record r = (Record)(list.SelectedItem);
             string l = r.M_name;
 
-            Navigation.PushAsync(new RecordPage(l));
+            Record n =(Record)(list.SelectedItem);
+            int m = m.M_no;
+
+            Navigation.PushAsync(new RecordPage(l , m));
 
         }
 

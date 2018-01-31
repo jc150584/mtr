@@ -15,34 +15,18 @@ namespace MuscleTrainingRecords00
     {
         DateTime yyyymmdd;
 
-        string t;
-        public RecordPage(string l)//string l
+        int t;
+        public RecordPage(string l, int m)//string l
         {
             InitializeComponent();
 
-            test.Text = l;
+            m_name.Text = l;
 
 
-            //t = l;
+            t = m;
             
         }
 
-
-        public void Insert_Clicked(object sender, EventArgs e)
-        {
-
-            int WeightText = int.Parse(Weight.Text);
-            int RepsText = int.Parse(Reps.Text);
-            int SetText = int.Parse(Set.Text);
-
-
-            DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
-        }
-        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
-        {
-
-        }
 
         //引っ張ったとき（更新）
         private async void OnRefreshing(object sender, EventArgs e)
@@ -64,6 +48,16 @@ namespace MuscleTrainingRecords00
             {
                 DisplayAlert("", "入力が不足しています", "OK");
             }
+
+            int WeightText = int.Parse(Weight.Text);
+            int RepsText = int.Parse(Reps.Text);
+            int SetText = int.Parse(Set.Text);
+
+
+            DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+            RecordsModel.UpdateRecord(m,WeightText,RepsText,SetText,now);
+
         }
     }
 }
