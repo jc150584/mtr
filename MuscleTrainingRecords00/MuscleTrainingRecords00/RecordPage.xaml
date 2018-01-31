@@ -150,7 +150,6 @@
                       IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
                       RowHeight="65"
-                      ItemTapped="list_ItemTapped"
                       x:Name="list"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
