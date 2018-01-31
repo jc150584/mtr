@@ -23,7 +23,7 @@ namespace MuscleTrainingRecords00
             m_name.Text = l;
 
 
-            t = l;
+            t = m;
             
         }
 
