@@ -166,15 +166,25 @@ namespace MuscleTrainingRecords00
         }
 
         /********************アップデートメソッド RecordPageに使用**************************************/
-        public static List<RecordsModel> UpdateRecord(int m_no, int m_weight, int m_leg, int m_set)
+        public static List<RecordsModel> UpdateRecord(int m_no, int m_weight, int m_leg, int m_set,DateTime m_date)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
+                int no=  m_no;
+                int weight = m_weight;
+                int leg = m_leg;
+                int set = m_set;
+                TimeSpan span = m_date;
+                int date = span.Days;
+
                 try
                 {
                     //データベースに指定したSQLを発行
-                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_weight] = [m_weight] , [M_leg] = [m_leg] ,[M_set] = [m_set] WHERE [M_no] = [m_no]");
+                    return db.Query<RecordsModel>("UPDATE [Records] SET [M_weight] = "+ weight +", [M_leg] = "+ leg +",[M_set] = "+ set + "WHERE [M_no] = "+ m_no);
 
+                    //db.Update(new RecordsModel() { M_no = m_no, M_weight = m_weight, M_leg = leg, M_set = m_set, M_date = m_date });
+
+                    //db.Commit();
                 }
                 catch (Exception e)
                 {
