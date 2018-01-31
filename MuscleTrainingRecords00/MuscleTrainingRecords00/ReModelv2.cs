@@ -7,7 +7,7 @@ namespace MuscleTrainingRecords00
     class ReModelv2
     {
         public static int key = 1;
-        public ObservableCollection<Record> Records
+        public ObservableCollection<Recordv2> Records
         {
             get;
             private set;
@@ -20,11 +20,11 @@ namespace MuscleTrainingRecords00
             if (RecordsModelv2.SelectRe(key) != null)
             {
                 var query = RecordsModelv2.SelectRe(key);
-                Records = new ObservableCollection<Record>();
+                Records = new ObservableCollection<Recordv2>();
 
                 foreach (var record in query)//拡張forループ
                 {
-                    Record r = new Record
+                    Recordv2 r = new Recordv2
                     {
                         M_no = record.M_no,
                         M_name = record.M_name,
@@ -45,15 +45,30 @@ namespace MuscleTrainingRecords00
 
             else
             {
-                Records = new ObservableCollection<Record>
+                Records = new ObservableCollection<Recordv2>
            {
-               new Record
+               new Recordv2
                {
                    M_name = "データなし"
                }
            };
             }
         }
+    }
+    public class Recordv2
+    {
+        public int M_no { get; set; } //筋トレNo 主キー
+
+        public string M_name { get; set; } //筋トレ名前
+
+        public int M_weight { get; set; } //重量
+
+        public int M_leg { get; set; } //回数
+
+        public int M_set { get; set; } //セット数
+
+        public DateTime M_date { get; set; } //日
+
     }
 
 

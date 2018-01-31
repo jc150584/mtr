@@ -108,10 +108,7 @@
                    Keyboard ="Numeric"
                     Placeholder="Set"
                    x:Name="Set"/>
-                
-               
-                
-                
+
 
             </StackLayout>
             <StackLayout Orientation="Vertical">
