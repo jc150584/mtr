@@ -54,8 +54,8 @@ namespace MuscleTrainingRecords00
 
             DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
-            //RecordModelv2.InsertRe(t,x,WeightText,RepsText,SetText,now);
-            RecordModelv2.InsertRe(0, "データ", 0, 0, 0, now);
+            RecordModelv2.InsertRe(t,x,WeightText,RepsText,SetText,now);
+            //RecordModelv2.InsertRe(0, "データ", 0, 0, 0, now);
         }
     }
 }

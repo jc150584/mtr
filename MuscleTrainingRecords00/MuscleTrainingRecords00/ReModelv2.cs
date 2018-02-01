@@ -17,11 +17,11 @@ namespace MuscleTrainingRecords00
         {
 
 
-            //if (RecordModelv2.SelectRe(key) != null)
-            if(RecordModelv2.SelectRecord()!= null)
+            if (RecordModelv2.SelectRe(key) != null)
+            //if(RecordModelv2.SelectRecord()!= null)
             {
-                //var query = RecordModelv2.SelectRe(key);
-                var query = RecordModelv2.SelectRecord();
+                var query = RecordModelv2.SelectRe(key);
+                //var query = RecordModelv2.SelectRecord();
                 Recordsv2 = new ObservableCollection<Recordv2>();
 
                 foreach (var record in query)//拡張forループ
