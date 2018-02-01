@@ -154,19 +154,15 @@
 
                                 <Label Text="{Binding M_date}" 
                                    Grid.Column="0" Grid.Row="0"
-                                       x:Name="m_d"
                                    FontAttributes="Bold"/>
                                     <Label Text="{Binding M_weight}"
-                                           x:Name="m_w"
                                            Grid.Column="1" Grid.Row="0"
                                            FontAttributes="Bold"/>
                                     <Label Text="{Binding M_leg}" 
                                             Grid.Column="2" Grid.Row="0"
-                                           x:Name="m_l"
                                            FontAttributes="Bold"/>
                                     <Label Text="{Binding M_set}" 
                                             Grid.Column="3" Grid.Row="0"
-                                           x:Name="m_s"
                                            FontAttributes="Bold"/>
                             </Grid>
                         </ViewCell>
