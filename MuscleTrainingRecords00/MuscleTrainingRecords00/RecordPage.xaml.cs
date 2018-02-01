@@ -25,6 +25,11 @@ namespace MuscleTrainingRecords00
 
             x = l;
             t = m;
+
+            m_d.Text = "a";
+            m_w.Text = "b";
+            m_l.Text = "c";
+            M_s.Text = "d";
             
         }
 
@@ -38,14 +43,14 @@ namespace MuscleTrainingRecords00
             //リフレッシュを止める
             list.IsRefreshing = false;
 
-            //InitializeComponent();
+            InitializeComponent();
 
         }
 
         private void addItemButton_Clicked(object sender, EventArgs e)
         {
 
-            if(KG.Text == null || Reps.Text == null || Set.Text == null)
+            if(Weight.Text == null || Reps.Text == null || Set.Text == null)
             {
                 DisplayAlert("", "入力が不足しています", "OK");
             }
