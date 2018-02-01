@@ -34,7 +34,7 @@ namespace MuscleTrainingRecords00
                         M_date = record.M_date
                     };
                     //一行ずつ追加
-                    Recordv2.Add(r);
+                    Recordsv2.Add(r);
                 }
             }
 
