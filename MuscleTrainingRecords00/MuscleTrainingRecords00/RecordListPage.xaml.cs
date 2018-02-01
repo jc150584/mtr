@@ -57,9 +57,9 @@ namespace MuscleTrainingRecords00
 
         private void btnTest_Clicked(object sender, EventArgs e)
         {
-            Record n = (Record)(list.SelectedItem);
+           /* Record n = (Record)(list.SelectedItem);
             int m = n.M_no;
-            RecordsModel.DeleteRecords(m);
+            RecordsModel.DeleteRecords(m);*/
         }
 
         /*private async void button_Clicked(object sender, EventArgs e)
