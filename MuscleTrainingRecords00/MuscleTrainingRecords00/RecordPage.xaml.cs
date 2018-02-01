@@ -38,7 +38,7 @@ namespace MuscleTrainingRecords00
             //リフレッシュを止める
             list.IsRefreshing = false;
 
-            InitializeComponent();
+            //InitializeComponent();
 
         }
 
