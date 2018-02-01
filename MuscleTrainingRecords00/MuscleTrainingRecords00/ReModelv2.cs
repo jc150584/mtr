@@ -16,7 +16,6 @@ namespace MuscleTrainingRecords00
         public ReModelv2()
         {
 
-
             if (RecordModelv2.SelectRe(key) != null)
             //if(RecordModelv2.SelectRecord()!= null)
             {

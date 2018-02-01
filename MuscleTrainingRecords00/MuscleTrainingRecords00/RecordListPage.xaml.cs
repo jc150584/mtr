@@ -12,7 +12,7 @@ namespace MuscleTrainingRecords00
 {
     public partial class RecordListPage : ContentPage
     {
-
+        int m;
         public RecordListPage()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace MuscleTrainingRecords00
             string l = r.M_name;
 
             Record n =(Record)(list.SelectedItem);
-            int m = n.M_no;
+             m = n.M_no;
 
             ReModelv2.key = m;
             Navigation.PushAsync(new RecordPage(l,m));
