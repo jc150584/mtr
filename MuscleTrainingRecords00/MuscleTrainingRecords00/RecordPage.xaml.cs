@@ -25,11 +25,6 @@ namespace MuscleTrainingRecords00
 
             x = l;
             t = m;
-
-            m_d.Text = "a";
-            m_w.Text = "b";
-            m_l.Text = "c";
-            M_s.Text = "d";
             
         }
 
