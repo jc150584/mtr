@@ -6,7 +6,7 @@ namespace MuscleTrainingRecords00
 {
     class ReModelv2
     {
-        public static int key = 1;
+        public static int key;
         public ObservableCollection<Recordv2> Recordsv2
         {
             get;
