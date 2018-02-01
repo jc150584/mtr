@@ -33,12 +33,12 @@ namespace MuscleTrainingRecords00
         private async void OnRefreshing(object sender, EventArgs e)
         {
             // 1秒処理を待つ
-           /* await Task.Delay(1000);
+            await Task.Delay(1000);
 
             //リフレッシュを止める
             list.IsRefreshing = false;
 
-            InitializeComponent();*/
+            InitializeComponent();
 
         }
 
