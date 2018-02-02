@@ -24,6 +24,7 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
+            /* 2つどっちでもOK */
             image.Source = ImageSource.FromResource(i);
 
             image2.Source = ImageSource.FromStream(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream(i));
