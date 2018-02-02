@@ -14,6 +14,8 @@
 
             <Image x:Name="image"/>
 
+            <Image x:Name="image2"/>
+
             <Label Text=""
                    x:Name="Description"
                    HorizontalOptions="CenterAndExpand"
