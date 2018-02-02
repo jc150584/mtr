@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,7 +24,9 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
-            image.Source = ImageSource.FromResource(i);
+            //image.Source = ImageSource.FromResource(i);
+
+            image.Source = ImageSource.FromStream(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream(i));
 
             t = m;
 
