@@ -115,11 +115,9 @@ namespace MuscleTrainingRecords00
             await itemDataBase.InsertItemAsync(new Training() { Menu = "レッグプレス（マシン）　　　　　　　　　　　　　　　　", Load = "負荷度:☆☆", parts = "脚", Desc = "シートの角度を調節します。シートに座ってプレートに両脚を置く。膝を伸ばしてストッパーを外し、膝をゆっくり曲げます。お腹に膝がつく蔵院で曲げたら持ち上げます", image = "dumbbell_man.png" });
             await itemDataBase.InsertItemAsync(new Training() { Menu = "ワンレッグスクワット　　　　　　　　　　　　　　　　　", Load = "負荷度:☆☆☆", parts = "脚", Desc = "片足で立ち、腹筋に力を入れて背筋を伸ばし、胸を張る。背中を丸めないように注意しながら深くしゃがみ、その後、元に戻る。", image = "dumbbell_man.png" });
             RecordModelv2.InsertRe(5, "レッグレイズ", 3, 8, 2, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
-            RecordModelv2.SelectRecord();
-
-
 
         }
+
 
 
 
