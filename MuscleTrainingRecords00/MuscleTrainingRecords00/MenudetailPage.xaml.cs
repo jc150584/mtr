@@ -24,9 +24,10 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
-            //image.Source = i;
+            image.Source =  ImageSource.FromUri(new Uri(i));
 
             t = m;
+
         }
 
         private void addItemButton_Clicked(object sender, EventArgs e)
