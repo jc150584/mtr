@@ -269,7 +269,7 @@
     <BundleResource Include="Resources\numbered-list.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\dumbbell_man.png" />
+    <EmbeddedResource Include="Resources\dumbbell_man.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
