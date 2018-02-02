@@ -19,12 +19,11 @@ namespace MuscleTrainingRecords00
         {
             InitializeComponent();
 
-
             Transition.Text = m.Trim();
 
             Description.Text = d;
 
-            image.Source = new Uri(i);
+            image.Source = ImageSource.FromResource(i);
 
             t = m;
 
