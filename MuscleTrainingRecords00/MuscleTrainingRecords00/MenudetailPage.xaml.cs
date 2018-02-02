@@ -28,6 +28,8 @@ namespace MuscleTrainingRecords00
 
             image2.Source = ImageSource.FromStream(() => GetType().GetTypeInfo().Assembly.GetManifestResourceStream(i));
 
+            iname.Text = i;
+
             t = m;
 
         }
