@@ -23,7 +23,9 @@ namespace MuscleTrainingRecords00
 
             Description.Text = d;
 
-            image.Source = ImageSource.FromResource(i);
+            //image.Source = ImageSource.FromResource(i);
+
+            image.Source = ImageSource.FromUri(new Uri(i));
 
             t = m;
 
